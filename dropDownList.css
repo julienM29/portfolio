@@ -1,0 +1,39 @@
+.dropdown-content {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  .dropdown-content.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Rotation de l'icône lorsqu'on ouvre le menu */
+  .rotate-icon {
+    transition: transform 0.3s ease;
+  }
+  .rotate-icon.open {
+    transform: rotate(180deg);
+  }
+
+  /* Améliorations visuelles */
+  .dropdown-content {
+    background-color: #ffffff; /* Fond blanc pour le menu */
+    border: 1px solid #e2e8f0; /* Bordure légère */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    padding: 0.5rem; /* Espacement interne */
+    border-radius: 0.5rem; /* Bords arrondis */
+  }
+  
+  .dropdown-item {
+    padding: 0.5rem 1rem; /* Espacement interne pour les éléments */
+    transition: background-color 0.2s ease; /* Transition douce pour le hover */
+  }
+
+  .dropdown-item:hover {
+    background-color: #e2e8f0; /* Fond gris clair au survol */
+  }
+
+  .dropdown-item:active {
+    background-color: #cbd5e1; /* Fond plus foncé quand on clique */
+  }

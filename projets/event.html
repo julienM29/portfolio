@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez mon projet de site web évènementiel, intégrant la gestion d'événements et un système de notification et de messagerie.">
+
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../dropDownList.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" type='text/css' href="../dist/styles.css">
+    <link rel="stylesheet" type='text/css' href="../focus.css">
+    <title>Projet Event</title>
+
+</head>
+<body>
+    <header id="navbar" class="flex flex-col fixed top-0 bg-slate-700/80 w-full h-16 drop-shadow-lg z-20">
+        <div class="h-full flex justify-between py-1 px-4 sm:px-6 md:px-12 lg:px-20 text-xl font-bold">
+            <div class="flex items-center h-full">
+                <a href="portefolio.html#accueil" class="md:text-2xl sm:text-xl  text-white font-semibold">
+                    Julien Miossec
+                </a>
+            </div>
+
+            <ul class="flex justify-end gap-5 items-center sm:text-base md:text-lg text-white">
+                <li class="max-sm:hidden">
+                    <a href="../portefolio.html#accueil"
+                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50"
+                        aria-current="page">Accueil</a>
+                </li>
+                <li class="max-sm:hidden">
+                    <a href="../portefolio.html#about"
+                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Profil</a>
+                </li>
+                <li class="max-sm:hidden">
+                    <a href="../portefolio.html#projets"
+                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Projets</a>
+                </li>
+                <li class="max-sm:hidden">
+                    <a href="../portefolio.html#contact"
+                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Contact</a>
+                </li>
+            </ul>
+            <div class="sm:hidden flex items-center">
+                <button id="burger-button" aria-expanded="false" aria-controls="menuBurger"
+                    class="mobile-menu-button focus:outline-none focus:ring-4 focus:ring-amber-500">
+                    <svg class="w-6 h-6 text-white hover:text-amber-500" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hidden mobile-menu" id="menuBurger">
+            <ul class="divide-y-4 ">
+                <li><a href="../portefolio.html#accueil"
+                        class="block text-sm px-2 py-4 font-semibold bg-slate-600 hover:bg-slate-400 text-white transition duration-300"
+                        id="homeButton">Accueil</a>
+                </li>
+                <li><a href="../portefolio.html#about"
+                        class="block text-sm px-2 py-4 font-semibold bg-slate-600 hover:bg-slate-400 text-white transition duration-300"
+                        id="aboutButton">Profil</a></li>
+                <li><a href="../portefolio.html#projets"
+                        class="block text-sm px-2 py-4 font-semibold bg-slate-600 hover:bg-slate-400 text-white transition duration-300"
+                        id="projetButton">Projets</a>
+                </li>
+                <li><a href="../portefolio.html#contact"
+                        class="block text-sm px-2 py-4 font-semibold bg-slate-600 hover:bg-slate-400 text-white transition duration-300"
+                        id="contactButton">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class=" lg:h-screen  bg-cover" id="projets">
+        
+        <div class="w-full h-full gap-8 md:gap-16 flex flex-col items-center py-16">
+            <div class="flex flex-col items-center max-md:text-2xl md:text-4xl lg:text-5xl gap-8 font-semibold mt-2">
+                <h1 class="text-white">
+                    Event
+                </h1>
+                <div>
+                    <hr class="w-32 bg-amber-500 h-2 rounded-lg">
+                </div>
+            </div>
+            <div class="w-5/6 lg:w-4/6">
+                <img src="/img/event/accueil.jpg" alt="Page d'accueil de site"
+                class="shadow-lg shadow-zinc-500 w-full h-auto ring ring-zinc-500 rounded-lg">
+            </div>
+        </div>
+    </div>
+    <div class=" bg-gradient-to-b from-zinc-400 to-zinc-300 flex flex-col items-center py-14 drop-shadow-2xl"
+        id="introduction">
+        <div class=" w-full h-full gap-8 flex flex-col items-center pb-10">
+            <div class="w-3/4 flex flex-col gap-8">
+                <div class="flex flex-col gap-8">
+                    <div
+                        class="flex flex-col items-center max-md:text-xl md:text-3xl lg:text-4xl gap-6 font-semibold mt-2">
+                        <div class="font-semibold text-3xl md:text-5xl text-zinc-700 drop-shadow-2xl shadow-amber-500">
+                            Introduction
+                        </div>
+                        <div>
+                            <hr class="w-40 bg-amber-500 h-2 rounded-lg">
+                        </div>
+                    </div>
+                    <div class="text-justify max-lg:text-base text-lg">
+                        Après avoir suivi plusieurs cours en ligne sur Node.js, j'ai décidé de me lancer dans un projet
+                        pour mettre en pratique ce que j'avais appris. Mon choix s'est porté sur la création d'un site
+                        événementiel, qui inclut un système de messagerie entre utilisateurs, des notifications pour les
+                        informer des messages reçus, des invitations à des événements ou des évaluations de leurs
+                        événements.
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col gap-6">
+                    <h2 class="max-lg:text-lg text-2xl font-bold text-center">Le site contient les fonctionnalités suivantes :</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div class="flex flex-col gap-4">
+                            <h3 class="text-base xl:text-lg font-semibold">Gestion des utilisateurs</h3>
+                            <ul class="list-disc list-inside text-sm xl:text-base">
+                                <li>Création d'un compte / Authentification</li>
+                                <li>Modification des informations / mot de passe</li>
+                                <li>Voir le profil d'un autre utilisateur</li>
+                                <li>Envoyer un message à un ou plusieurs utilisateurs</li>
+                                <li>Système de notification</li>
+                                <li>Système de discussion</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <h3 class="text-base xl:text-lg font-semibold">Gestion des événements</h3>
+                            <ul class="list-disc list-inside text-sm xl:text-base">
+                                <li>Ajouter un évènement</li>
+                                <li>Modifier un évènement</li>
+                                <li>Annuler un évènement</li>
+                                <li>Supprimer un évènement</li>
+                                <li>Voir ses évènements</li>
+                                <li>Inviter un utilisateur à un évènement</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <h3 class="text-base xl:text-lg font-semibold">Participation et évaluation</h3>
+                            <ul class="list-disc list-inside text-sm xl:text-base">
+                                <li>Trier les évènements par nom, lieu et/ou mots clés</li>
+                                <li>Voir le détail d'un évènement</li>
+                                <li>S'inscrire à un évènement</li>
+                                <li>Voir les évènements auxquels on participe</li>
+                                <li>Évaluer un évènement</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="w-3/4 flex flex-col gap-4 max-lg:items-center">
+                <div class="font-medium max-lg:text-xl lg:text-3xl">Outils utilisés</div>
+                <div class="grid gap-4 grid-cols-2 lg:grid-cols-4 justify-around w-full">
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Langages</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-nodejs-plain-wordmark text-4xl text-green-500"></i>
+                                <p class=" text-gray-700 max-sm:text-sm">Nodejs</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-javascript-plain text-4xl text-yellow-500"></i>
+                                <p class=" text-gray-700 max-sm:text-sm">JavaScript</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Frameworks</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-fastify-plain text-4xl text-black"></i>
+                                <p class=" text-gray-700 max-sm:text-sm">Fastify</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-bootstrap-plain text-4xl text-purple-500"></i>
+                                <p class=" text-gray-700 max-sm:text-sm">Bootstrap</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Bases de données</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-mysql-original text-4xl text-blue-500"></i>
+                                <p class=" text-gray-700 max-sm:text-sm">MySQL</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-dbeaver-plain text-4xl text-yellow-800"></i>
+                                <p class=" text-gray-700 max-sm:text-sm">DBeaver</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Outils</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-vscode-plain text-3xl text-blue-600"></i>
+                                <p class=" text-gray-700 max-sm:text-sm">Visual Studio Code</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <img src="/img/leaflet-transparent.png" alt="Icone de Leaflet" class="w-11">
+                                <p class=" text-gray-700 max-sm:text-sm">Leaflet</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <img src="/img/full-calendar-transparent.png" alt="Icone de FullCalendar" class="w-9">
+                                <p class=" text-gray-700 max-sm:text-sm">FullCalendar</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" bg-zinc-200 flex flex-col items-center py-10 drop-shadow-2xl" id="notification">
+        <div class="w-5/6 flex flex-col gap-4 max-lg:items-center">
+            <div class="flex flex-col items-center max-md:text-xl md:text-3xl lg:text-4xl gap-10 font-semibold">
+                <div class="font-semibold text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-zinc-700 drop-shadow-lg">
+                    Fonctionnalités principales
+                </div>
+                <div>
+                    <hr class="w-40 bg-amber-500 h-2 rounded-lg">
+                </div>
+            </div>
+            <div x-data="setup()" class="relative">
+                <button @click="openMenu = !openMenu" :aria-expanded="openMenu ? 'true' : 'false'"
+                    aria-controls="megaMenu"
+                    class="flex items-center px-4 py-2 bg-slate-700 text-white font-bold rounded-lg text-lg sm:text-xl md:text-2xl lg:text-3xl transition-transform duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-4 focus:ring-amber-500">
+                    Fonctionnalités présentées
+                    <svg class="ml-2 w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-200" aria-hidden="true"
+                        :class="openMenu ? 'rotate-180' : ''" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+
+                </button>
+                <div id="megaMenu" x-show="openMenu" @click.away="openMenu = false"
+                    class="absolute mt-2 w-full bg-white shadow-lg z-50">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 bg-slate-500 border-t border-slate-600 rounded-lg shadow-lg">
+                        <template x-for="(section, sectionIndex) in sections" :key="sectionIndex">
+                            <div>
+                                <h2 class="text-xl font-semibold text-slate-50 mb-3 mt-2 border-b-2 border-slate-600 pb-2 drop-shadow-lg"
+                                    x-text="section"></h2>
+                                <ul class="space-y-2">
+                                    <template x-for="(feature, featureIndex) in features[sectionIndex]"
+                                        :key="featureIndex">
+                                        <li>
+                                            <a href="#"
+                                                @click.prevent="setActiveSection(sectionIndex); setActiveFeature(featureIndex); openMenu = false"
+                                                class="font-semibold hover:bg-amber-500 rounded-lg text-slate-50 py-2 px-4 transition-colors duration-500 ease-in-out hover:text-white hover:shadow-amber-600"
+                                                x-text="feature"></a>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <div class="w-full mt-6 bg-white shadow-md p-6 rounded-lg ">
+                    <template x-if="activeSection === 0 && activeFeature === 0">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-xl lg:text-3xl font-bold text-gray-700">Ajouter ou modifier un évènement
+                            </h2>
+
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl border-2"
+                                        controls>
+                                        <source src="../video/event/ajout_modif_evenement.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg">
+
+                                    <p>Survoler l'image avec la souris permet de voir l'option <strong>Télécharger une
+                                            image</strong>, permettant de sélectionner une affiche pour l'événement
+                                        depuis ses fichiers et
+                                        de pouvoir prévisualiser ce qui a été téléchargé.</p>
+                                    <p>L'utilisateur peut aussi choisir si les inscriptions sont ouvertes pendant
+                                        l'événement ou si
+                                        une date limite d'inscription doit être définie.</p>
+                                    <p>Inscrire un lieu ou une adresse dans le champ <strong>Lieu de
+                                            l'évènement</strong> permet de faire appel à une <span
+                                            class="text-amber-500 font-semibold">API de géocoding</span> permettant de
+                                        remplir la
+                                        liste des lieux du champ <strong>Sélectionner le lieu</strong> avec les 5
+                                        adresses les plus pertinentes.</p>
+                                    <p>En inscrivant un nombre de places limité, si celui-ci est atteint, les
+                                        inscriptions se fermeront automatiquement.</p>
+                                    <p>La modification d'un événement reprend le même formulaire que celui d'ajout, tout
+                                        en ajoutant 2 boutons permettant d'<strong
+                                            class="text-amber-500">annuler</strong> l'événement ou de le
+                                        <strong class="text-amber-500">supprimer</strong>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 0 && activeFeature === 1">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Trier les évènements</h2>
+                            <div class="flex flex-col xl:flex-row gap-8">
+
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl border-2"
+                                        controls>
+                                        <source src="../video/event/Tri_page_accueil.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg leading-relaxed">
+                                    <p>Sur la page principale du site, l'utilisateur peut trier les événements par
+                                        <strong>mots-clés</strong>, <strong>nom</strong> d'événement,
+                                        <strong>lieu</strong> et par statut (<strong>actif</strong> ou
+                                        <strong>passé</strong>).
+                                    </p>
+                                    <div> En cliquant sur l'évènement ou sur le bouton
+                                        "<strong>Événement</strong>", l'utilisateur arrive sur la page
+                                        détaillant l'événement. </div>
+                                    <div>Si l'utilisateur trie les évènements en fonction de ceux qui sont passés, il
+                                        peut avoir accès à un autre bouton <strong
+                                            class="textamber-500">Évaluation</strong> celui-ci permet d'accéder à la
+                                        page contenant les évaluations faites par les participants sur un évènement.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 0 && activeFeature === 2">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Détail d'un évènement</h2>
+                            <div class="flex flex-col xl:flex-row gap-8">
+
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl border-2"
+                                        controls>
+                                        <source src="../video/event/detail_evenement.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg">
+
+                                    <div class="">Depuis la page d'accueil, en cliquant sur <strong>Évènement</strong>
+                                        ou directement dessus, l'utilisateur arrive sur la page détaillant un évènement.
+                                    </div>
+                                    <div>Sur cette page est inscrit les informations principales de l'évènement avec le
+                                        nombre de places disponible, un bouton d'
+                                        <span class="text-amber-500 font-semibold">inscription</span> à l'évènement
+                                        ainsi
+                                        qu'un bouton pour <span class="text-amber-500 font-semibold">partager</span>
+                                        l'évènement à un ou plusieurs autres utilisateurs.
+                                    </div>
+                                    <div>Quand l'utilisateur est l'organisateur de l'évènement, à la place du bouton
+                                        d'inscription il y a un bouton <span
+                                            class="text-amber-500 font-semibold">modifier
+                                            l'évènement</span>. Ce bouton
+                                        permet d'accéder à la page de modification de l'évènement.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 0 && activeFeature === 3">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Participations</h2>
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl border-2"
+                                        controls>
+                                        <source src="../video/event/participations.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg">
+
+                                    <div>En cliquant sur
+                                        <strong class="text-amber-500">"Mes participations"</strong> dans
+                                        la barre latérale, un sous-menu apparaît. Il y a deux choix :
+                                        <strong class="text-amber-500">Participations à venir</strong> et <strong
+                                            class="text-amber-500">Mes
+                                            participations</strong>.
+                                    </div>
+                                    <div class="flex flex-col gap-4">
+                                        <div class="text-xl font-bold text-gray-700">Participations à venir</div>
+
+                                        <p>Sur cette page est généré un calendrier interactif via la bibliothèque
+                                            JavaScript <strong>FullCalendar</strong>, permettant à l'utilisateur de
+                                            visualiser plus facilement tous les événements auxquels il participe avec
+                                            l'heure de début et de fin.</p>
+                                    </div>
+                                    <div class="flex flex-col gap-4 text-justify">
+                                        <div class="text-xl font-bold text-gray-700">Mes participations</div>
+
+                                        <p>Toutes les participations de l'utilisateur sont regroupées dans un tableau.
+                                            Ils sont triés par date de début d'évènement et on
+                                            peut rechercher un événement par son <strong>nom</strong>.</p>
+                                        <p>Dans le
+                                            tableau, on retrouve une colonne
+                                            <strong>Évaluation</strong> indiquant si l'événement est fini ou non,
+                                            et si l'utilisateur a fait une évaluation dessus. Si l'évènement est
+                                            terminé, un lien apparait permettant d'accéder à la page <strong
+                                                class="text-amber-500">évaluation</strong> de l'évènement.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 0 && activeFeature === 4">
+                        <div class="flex flex-col gap-6">
+
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Évaluation</h2>
+                            <div class="flex flex-col xl:flex-row gap-8">
+
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl border-2"
+                                        controls>
+                                        <source src="../video/event/evaluations.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg leading-relaxed">
+                                    <div>Depuis la page <strong>Mes participations</strong> ou depuis la page
+                                        d'<strong>accueil</strong> en cliquant sur le bouton <span
+                                            class="text-amber-500 font-semibold">évaluations</span>, l'utilisateur
+                                        arrive
+                                        sur une page répertoriant les évaluations faites sur cet évènement.</div>
+                                    <div>On peut y voir le nom de l'évènement, le lieu, les dates de début et de fin
+                                        d'évènement ainsi que la partie évaluation.</div>
+                                    <div>Cette dernière affiche une moyenne des notes , un bouton <span
+                                            class="text-amber-500 font-semibold">Évaluer l'évènement</span> si
+                                        l'utilisateur à participer à l'évènement, permettant d'évaluer ou de modifier
+                                        son évaluation.</div>
+                                    <p>Cette page permet aux utilisateurs de voir les évaluations faites sur un
+                                        événement, et pour ceux qui ont participé, de pouvoir évaluer ou modifier
+                                        leur évaluation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 1 && activeFeature === 0">
+                        <div class="flex flex-col max-sm:justify-center gap-8 max-sm:text-xs max-md:text-sm md:text-base"
+                            id="envoieMessage">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Messagerie et discussions</h2>
+                            <div class="text-sm md:text-base lg:text-lg">Pour accéder à la messagerie, l'utilisateur
+                                peut soit passer par le
+                                logo de
+                                messagerie <i class="fa-solid fa-message"></i> dans la
+                                barre de
+                                navigation ou dans le menu à gauche en cliquant sur <strong
+                                    class="text-amber-500">messagerie.</strong>
+                            </div>
+                            <div class="grid grid-cols-2 gap-6 text-sm md:text-base lg:text-lg">
+                                <div class="flex flex-col gap-4">
+                                    <h2 class="text-2xl font-bold text-gray-700">Messagerie</h2>
+
+                                    <div>La messagerie liste toutes les discussions de l'utilisateur, elles sont
+                                        triées par
+                                        <strong>message non
+                                            lus</strong> puis par <strong>date d'envoi</strong> du dernier message.
+                                        Une
+                                        discussion contenant
+                                        au moins un <strong>message non lu</strong> apparaît tout en haut de la
+                                        liste en gras
+                                        avec une pastille bleue.
+                                    </div>
+                                    <div>Pour <strong>envoyer un message</strong> à un utilisateur, on doit
+                                        rechercher son nom
+                                        dans la liste
+                                        d'utilisateurs puis cliquer sur l'icône
+                                        <i class="fa-solid fa-pen-to-square text-blue-500"></i>
+                                        en haut à droite. Une modale s'ouvre, on n'a plus qu'à écrire le message et
+                                        l'envoyer.
+                                    </div>
+                                    <div>Si la discussion avec le ou les utilisateurs existe déjà, le message est
+                                        ajouté à la
+                                        discussion
+                                        existante, sinon une nouvelle discussion est créée. Après l'envoi du
+                                        message, on arrive
+                                        directement
+                                        sur la <strong>discussion</strong>.</div>
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <h2 class="text-2xl font-bold text-gray-700">Discussion</h2>
+
+                                    <div>Dans la discussion, on peut voir tous les messages triés par <strong>date
+                                            d'envoi</strong>.
+                                        Pour une
+                                        meilleure lisibilité, l'utilisateur connecté voit ses messages à gauche,
+                                        tandis que ceux
+                                        des autres utilisateurs sont à droite.</div>
+                                    <div>Dans une discussion avec plus de 2 utilisateurs, le <strong>nom</strong> des
+                                        utilisateurs
+                                        autres que
+                                        celui connecté
+                                        est affiché au-dessus de leurs messages.</div>
+                                    <div>L'image du profil de chaque utilisateur est également affichée pour mieux
+                                        repérer qui a
+                                        écrit le
+                                        message.</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-center gap-8 p-6">
+
+                                <div class="w-5/6 flex flex-col justify-center">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl border-2"
+                                        controls>
+                                        <source src="../video/event/messagerie.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 2 && activeFeature === 0">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Notifications liées à la messagerie
+                            </h2>
+
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl border-2"
+                                        controls>
+                                        <source src="../video/event/notification_discussion.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg leading-relaxed">
+
+                                    <div> Pour les <strong>
+                                            notifications liées à la messagerie</strong>, quand on envoie un message à
+                                        un
+                                        utilisateur, ce dernier reçoit une notification qui
+                                        est
+                                        ajouté au logo en haut dans la barre de navigation, le logo de la messagerie
+                                        dans le
+                                        menu à
+                                        gauche devient rouge.</div>
+                                    <div>L'utilisateur est notifié du nombre de discussion contenant au moins un message
+                                        non
+                                        lus au dessus du logo <i class="fa-solid fa-message"></i> et le logo devient
+                                        <span class="font-semibold text-blue-500">bleu</span>, le logo du menu
+                                        <strong>Messagerie</strong> sur la gauche
+                                        lui devient <span class="font-semibold text-red-500">rouge</span>.
+                                    </div>
+                                    <div>En cliquant sur le <i class="fa-solid fa-message"></i> ou sur
+                                        <strong>Mesagerie</strong> l'utilisateur arrive sur une page listant toutes les
+                                        discussion.
+                                    </div>
+                                    <div>Les discussions sont triées par date d'envoie du dernier message ainsi que si
+                                        ils
+                                        contiennet un ou plusieurs messages non lus.</div>
+                                    <div>Les discussions contenant une message non lus sont écritent en gras et
+                                        contiennent
+                                        une pastille bleue. En cliquant dessus nous arrivons sur la page de la
+                                        discussion
+                                        dans laquelle nous pouvons directement répondre aux messages.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 2 && activeFeature === 1">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Notifications liées aux évènements
+                            </h2>
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl border-2"
+                                        controls>
+                                        <source src="../video/event/notification_evenement.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg leading-relaxed">
+
+                                    <div> Pour les <strong>
+                                            notifications liées aux évènements</strong>, elles peuvent être de 2 types :
+                                        les
+                                        invitations à s'inscrire à un évènement (partage) et les évaluations des
+                                        utilisateurs sur l'un des évènements que l'utilisateur connecté a créé. </div>
+                                    <div>L'utilisateur est notifié du nombre de notifications non lus au dessus du logo
+                                        <i class="fa-solid fa-envelope "></i> et le logo devient <span
+                                            class="font-semibold text-blue-500">bleu</span>, le logo du menu sur la
+                                        gauche
+                                        lui devient <span class="font-semibold text-red-500">rouge</span>.
+                                    </div>
+                                    <div>En cliquant sur le <i class="fa-solid fa-envelope "></i> ou sur <strong>Mes
+                                            notifications</strong> l'utilisateur arrive sur une page listant toutes les
+                                        notifications.</div>
+                                    <div>Les notifications sont triés par date et en fonction de si elles sont lus ou
+                                        non
+                                        lus. On peut y voir le nom de l'utilisateur concerné par la notification , le
+                                        type
+                                        de notification et la date. En cliquant sur les notifications on arrive sur la
+                                        page
+                                        concerné par la notification et elle devient <strong>lu</strong> quand
+                                        l'utilisateur
+                                        n'a plus de notification non lus, les logos correspondant aux notifications
+                                        redeviennent gris.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bg-zinc-500 flex justify-center items-center max-sm:gap-4 gap-8 p-1" id="footer">
+        <div class="flex items-center gap-2">
+            <div>
+                <svg fill="#FFFFFF" height="20px" width="20px" version="1.1" id="Capa_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 367.467 367.467" xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <g>
+                            <path
+                                d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716 c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518 c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817 C326.536,262.466,262.481,326.518,183.73,326.518z">
+                            </path>
+                            <path
+                                d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915 c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129 c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982 c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154 l2.658-7.133h-44.28L244.036,217.014z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="max-sm:text-sm font-semibold text-white">2024 Julien Miossec | Tous droits réservés.</div>
+        </div>
+        <div class="flex max-sm:gap-2 gap-6">
+            <a href="https://www.linkedin.com/in/julien-miossec-a55869210/" class="text-zinc-50 flex items-center "
+                onclick="window.open(this.href); return false;">
+                <span class="sr-only">Linkedin</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="max-sm:w-6 max-sm:h-5 w-8 h-7" aria-hidden="true" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M22.23 0H1.77C.79 0 0 .77 0 1.73v20.55C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0zM7.06 20.45H3.56V9H7.06v11.45zM5.31 7.55c-1.12 0-2.03-.91-2.03-2.03s.91-2.03 2.03-2.03 2.03.91 2.03 2.03-.91 2.03-2.03 2.03zm15.14 12.9h-3.5v-5.85c0-1.39-.03-3.18-1.94-3.18-1.95 0-2.25 1.52-2.25 3.07v5.96h-3.5V9h3.36v1.56h.05c.47-.89 1.62-1.82 3.33-1.82 3.56 0 4.21 2.34 4.21 5.39v6.32z" />
+                </svg>
+            </a>
+            <a href="https://github.com/julienM29" class="text-zinc-50 flex items-center "
+                onclick="window.open(this.href); return false;">
+                <span class="sr-only">GitHub</span>
+                <svg class="max-sm:w-6 max-sm:h-6 w-8 h-8" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="fixed bottom-4 left-4">
+        <span class="sm:hidden">XS</span>
+        <span class="hidden sm:block md:hidden">SM</span>
+        <span class="hidden md:block lg:hidden">MD</span>
+        <span class="hidden lg:block xl:hidden">LG</span>
+        <span class="hidden xl:block ">XL</span>
+    </div>
+    <script src="../vanta_projet.js"></script>
+    <script src="../menu_burger.js"></script>
+    <script src="../menu_event.js"></script>
+</body>
+
+</html>

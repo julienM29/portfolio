@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jeune développeur web en reconversion, à la recherche d'une alternance en conception et développement d'applications (Bac+4) ou d'une première expérience professionnelle. Découvrez mes compétences et mes projets.">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" type='text/css' href="dist/styles.css">
+    <link rel="stylesheet" type='text/css' href="focus.css">
+
+    <title>Portefolio | Julien Miossec</title>
+    
+</head>
+<body class="h-screen w-screen overflow-x-hidden">
+    <header id="navbar" class="flex flex-col fixed top-0 bg-slate-700/80 w-full h-16 drop-shadow-lg z-20">
+        <div class="h-full flex justify-between py-1 px-4 sm:px-6 md:px-12 lg:px-20 text-xl font-bold">
+            <div class="flex items-center h-full">
+                <a href="portefolio.html#accueil" class="md:text-2xl sm:text-xl  text-white font-semibold">
+                    Julien Miossec
+                </a>
+            </div>
+
+            <ul class="flex justify-end gap-5 items-center sm:text-base md:text-lg text-white">
+                <li class="max-sm:hidden">
+                    <a href="portefolio.html#accueil"
+                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50"
+                        aria-current="page">Accueil</a>
+                </li>
+                <li class="max-sm:hidden">
+                    <a href="portefolio.html#about"
+                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Profil</a>
+                </li>
+                <li class="max-sm:hidden">
+                    <a href="portefolio.html#projets"
+                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Projets</a>
+                </li>
+                <li class="max-sm:hidden">
+                    <a href="portefolio.html#contact"
+                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Contact</a>
+                </li>
+            </ul>
+            <div class="sm:hidden flex items-center">
+                <button id="burger-button" aria-expanded="false" aria-controls="menuBurger"
+                    class="mobile-menu-button focus:outline-none focus:ring-4 focus:ring-amber-500">
+                    <svg class="w-6 h-6 text-white hover:text-amber-500" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hidden mobile-menu" id="menuBurger">
+            <ul class="divide-y-4 ">
+                <li><a href="portefolio.html#accueil"
+                        class="block text-sm px-2 py-4 font-semibold bg-slate-600 hover:bg-slate-400 text-white transition duration-300"
+                        id="homeButton">Accueil</a>
+                </li>
+                <li><a href="portefolio.html#about"
+                        class="block text-sm px-2 py-4 font-semibold bg-slate-600 hover:bg-slate-400 text-white transition duration-300"
+                        id="aboutButton">Profil</a></li>
+                <li><a href="portefolio.html#projets"
+                        class="block text-sm px-2 py-4 font-semibold bg-slate-600 hover:bg-slate-400 text-white transition duration-300"
+                        id="projetButton">Projets</a>
+                </li>
+                <li><a href="portefolio.html#contact"
+                        class="block text-sm px-2 py-4 font-semibold bg-slate-600 hover:bg-slate-400 text-white transition duration-300"
+                        id="contactButton">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class=" h-screen w-screen flex justify-center items-center" id="accueil">
+        <div class="flex flex-col w-10/12 max-md:gap-8 gap-14 items-center bg-zinc-50/90 p-4 rounded-lg shadow-2xl ">
+            <h1 class="text-center font-extrabold max-md:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Salut, je
+                m'appelle Julien
+                Miossec !</h1>
+            <div class="w-5/6 text-xl text-justify max-md:text-base md:text-2xl lg:text-3xl">Jeune développeur web en
+                reconversion, je suis à la recherche d'une entreprise pour réaliser mon alternance de concepteur
+                développeur d'applications (Bac+4) ou pour acquérir une première expérience professionnelle.</div>
+            <a href="#projets"
+                class="bg-slate-100 text-slate-600 px-6 py-3 md:text-lg lg:text-xl xl:text-2xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500">
+                Mes projets
+            </a>
+        </div>
+    </div>
+    <div class="xl:h-screen bg-zinc-100 gap-16 flex flex-col py-14" id="about">
+        <div class="flex flex-col items-center max-md:text-3xl md:text-4xl lg:text-5xl gap-8 font-semibold mt-2">
+            <div>
+                À propos de moi
+            </div>
+            <div>
+                <hr class="w-32 bg-amber-500 h-2 rounded-lg">
+            </div>
+        </div>
+        <div class="flex max-lg:flex-col max-lg:w-full max-lg:items-center justify-center gap-14">
+            <div class="flex flex-col gap-7 w-1/3 max-lg:w-5/6">
+                <div class="flex flex-col items-center gap-4 font-semibold mt-2">
+                    <div class="max-md:text-2xl md:text-3xl lg:text-4xl font-semibold">
+                        Apprenez à me connaitre
+                    </div>
+                    <div>
+                        <hr class="w-20 bg-amber-500 h-2 rounded-lg">
+                    </div>
+                </div>
+                <div class="text-justify flex flex-col gap-4 leading-6 max-md:text-base md:text-lg">
+                    <div>
+                        Je m'appelle Julien Miossec et j'ai suivi une formation en développement web et web mobile à
+                        l'ENI de Nantes en 2023. Actuellement, je recherche une entreprise pour réaliser une alternance
+                        ou ma première expérience professionnelle dans une entreprise sur Brest, Rennes ou Nantes.
+                    </div>
+                    <div>
+                        Ma formation m'a permis d'acquérir des compétences solides en HTML, CSS, Java, PHP, JavaScript
+                        et SQL, ainsi que dans divers frameworks tels que Spring Boot, Symfony et Angular. J'ai
+                        également acquis des bases solides en analyse et conception.
+                    </div>
+                    <div>
+                        En parallèle, je me forme en autodidacte sur des langages et frameworks supplémentaires,
+                        notamment Node.js avec Fastify et TailwindCSS. Dans la section Projets, vous pourrez découvrir
+                        quelques réalisations développées avec ces technologies.
+                    </div>
+                </div>
+
+                <div class="justify-center flex">
+                    <a href="#contact"
+                        class="bg-slate-100 text-slate-600 px-6 py-3 md:text-lg lg:text-xl xl:text-2xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500">
+                        Contact
+                    </a>
+
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 max-w-full w-2/5 max-lg:w-5/6">
+                <div class="flex flex-col items-center  gap-4 font-semibold mt-2">
+                    <div class="max-md:text-2xl md:text-3xl lg:text-4xl font-semibold">
+                        Mes compétences
+                    </div>
+                    <div>
+                        <hr class="w-20 bg-amber-500 h-2 rounded-lg">
+                    </div>
+                </div>
+                <div class="grid gap-4 grid-cols-2 lg:grid-cols-4 justify-around w-full">
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Front-end</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-html5-plain text-4xl text-orange-600"></i>
+                                <p class=" text-gray-700">HTML</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-css3-plain text-4xl text-blue-500"></i>
+                                <p class=" text-gray-700">CSS</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-javascript-plain text-4xl text-yellow-500"></i>
+                                <p class=" text-gray-700">JavaScript</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Back-end</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-java-plain text-4xl text-blue-500"></i>
+                                <p class=" text-gray-700">Java</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-php-plain text-4xl text-blue-500"></i>
+                                <p class=" text-gray-700">PHP</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-nodejs-plain-wordmark text-4xl text-green-500"></i>
+                                <p class=" text-gray-700">Node.js</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Frameworks</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-spring-original text-4xl text-green-500"></i>
+                                <p class=" text-gray-700">SpringBoots</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-symfony-original text-4xl text-black"></i>
+                                <p class=" text-gray-700">Symfony</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-fastify-plain text-4xl text-black"></i>
+                                <p class=" text-gray-700">Fastify</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-angular-plain text-4xl text-red-600"></i>
+                                <p class=" text-gray-700">Angular</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-tailwindcss-original text-4xl text-teal-400"></i>
+                                <p class=" text-gray-700">Tailwind</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-bootstrap-plain text-4xl text-purple-500"></i>
+                                <p class=" text-gray-700">Bootstrap</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Base de données</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-microsoftsqlserver-plain text-4xl text-black"></i>
+                                <p class=" text-gray-700">SQL Server</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-mysql-original text-4xl text-blue-500"></i>
+                                <p class=" text-gray-700">MySQL</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-mariadb-plain text-4xl text-teal-800"></i>
+                                <p class=" text-gray-700">MariaDB</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-dbeaver-plain text-4xl text-yellow-800"></i>
+                                <p class=" text-gray-700">DBeaver</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="xl:h-screen " id="projets">
+        <div class="w-full h-full max-lg:gap-10 gap-16 flex flex-col items-center pb-6 pt-4">
+            <div
+                class="text-zinc-100 flex flex-col items-center max-md:text-3xl md:text-4xl lg:text-6xl gap-8 font-semibold mt-2">
+                <div class="shadow-2xl">
+                    Mes projets
+                </div>
+                <div>
+                    <hr class="w-32 bg-amber-500 h-2 rounded-lg">
+                </div>
+                <div class="max-lg:w-3/4 text-base lg:text-xl xl:text-2xl text-justify">
+                    Les projets présentés ici sont des réalisations personnelles conçues pour m'exercer et démontrer mes
+                    compétences en développement web.
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center w-full justify-items-center max-lg:gap-6">
+                <div class="w-3/4 p-4 flex flex-col gap-6">
+                    <div class="relative group">
+                        <img src="/img/pizzaOnLine/accueil_PizzaOnLine2.jpg"
+                            class="shadow-lg shadow-zinc-50 w-full rounded-lg max-h-80 object-cover"
+                            alt="Fond d'écran de la page d'accueil du site">
+                        <div
+                            class="absolute inset-0 bg-black/50 backdrop-blur-md rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
+                            <div class="grid grid-cols-3 gap-6 justify-center w-full ">
+                                <div
+                                    class="bg-white bg-opacity-10 rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl w-full">
+                                    <h3 class="text-xl font-bold text-gray-50 mb-4">Langages</h3>
+                                    <ul class="space-y-4 font-semibold">
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                            <i class="devicon-php-plain text-4xl text-blue-500"></i>
+                                            <p class="text-gray-700">PHP</p>
+                                        </li>
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                            <i class="devicon-javascript-plain text-4xl text-yellow-500"></i>
+                                            <p class="text-gray-700">JavaScript</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="bg-white bg-opacity-10 rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl w-full">
+                                    <h3 class="text-xl font-bold text-gray-50 mb-4">Frameworks</h3>
+                                    <ul class="space-y-4 font-semibold">
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                            <i class="devicon-symfony-original text-4xl text-black"></i>
+                                            <p class="text-gray-700">Symfony</p>
+                                        </li>
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                            <i class="devicon-tailwindcss-original text-4xl text-teal-400"></i>
+                                            <p class="text-gray-700">Tailwind</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="bg-white bg-opacity-10 rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl w-full">
+                                    <h3 class="text-xl font-bold text-gray-50 mb-4">Base de données</h3>
+                                    <ul class="space-y-4 font-semibold">
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                            <i class="devicon-mysql-original text-4xl text-blue-500"></i>
+                                            <p class="text-gray-700">MySQL</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="text-zinc-100 uppercase font-bold text-center text-xl max-sm:text-sm shadow-lg">
+                       Création d'un site web pour une pizzéria
+                    </div>
+                    <div class="justify-center flex">
+                        <a href="projets/pizzaOnLine.html"
+                            class="bg-slate-100 text-slate-600 px-6 py-3 md:text-lg lg:text-xl xl:text-2xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-500 hover:ring-offset-4 ring ring-slate-500">
+                            En savoir plus
+                        </a>
+
+                    </div>
+                </div>
+                <div class="w-3/4 p-4 flex flex-col gap-6">
+                    <div class="relative group">
+                        <img src="/img/event/accueil.jpg"
+                            class="shadow-lg shadow-zinc-50 w-full rounded-lg max-h-80 object-cover"
+                            alt="Fond d'écran de la page d'accueil du site">
+                        <div
+                            class="absolute inset-0 bg-black/50 backdrop-blur-md rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
+                            <div class="grid grid-cols-3 gap-6 justify-center w-full ">
+                                <div
+                                    class="bg-white bg-opacity-10 rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl w-full">
+                                    <h3 class="text-xl font-bold text-gray-50 mb-4">Langages</h3>
+                                    <ul class="space-y-4 font-semibold">
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2">
+                                            <i class="devicon-nodejs-plain-wordmark text-4xl text-green-500"></i>
+                                            <p class="mt-2 text-gray-700">Nodejs</p>
+                                        </li>
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2">
+                                            <i class="devicon-javascript-plain text-4xl text-yellow-500"></i>
+                                            <p class="mt-2 text-gray-700">JavaScript</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="bg-white bg-opacity-10 rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl w-full">
+                                    <h3 class="text-xl font-bold text-gray-50 mb-4">Frameworks</h3>
+                                    <ul class="space-y-4 font-semibold">
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2">
+                                            <i class="devicon-fastify-plain text-4xl text-black"></i>
+                                            <p class="mt-2 text-gray-700">Fastify</p>
+                                        </li>
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2">
+                                            <i class="devicon-bootstrap-plain text-4xl text-purple-500"></i>
+                                            <p class="mt-2 text-gray-700">Bootstrap</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="bg-white bg-opacity-10 rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl w-full">
+                                    <h3 class="text-xl font-bold text-gray-50 mb-4">Base de données</h3>
+                                    <ul class="space-y-4 font-semibold">
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2">
+                                            <i class="devicon-mysql-original text-4xl text-blue-500"></i>
+                                            <p class="mt-2 text-gray-700">MySQL</p>
+                                        </li>
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2">
+                                            <i class="devicon-dbeaver-plain text-4xl text-yellow-800"></i>
+                                            <p class="mt-2 text-gray-700">DBeaver</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-zinc-100 uppercase font-bold text-center text-xl max-sm:text-sm shadow-lg">
+                       Création d'un site
+                        web évènementiel</div>
+                    <div class="justify-center flex">
+                        <a href="projets/event.html"
+                            class="bg-slate-100 text-slate-600 px-6 py-3 md:text-lg lg:text-xl xl:text-2xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-500 hover:ring-offset-4 ring ring-slate-500">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="xl:h-screen min-h-screen min-w-screen w-full h-full bg-zinc-50 flex flex-col gap-2" id="contact">
+        <div class="max-lg:pt-10 pt-16 flex-grow flex flex-col items-center gap-16">
+            <div class="flex flex-col items-center max-md:text-3xl md:text-4xl lg:text-5xl gap-8 font-semibold mt-2">
+                <div>Contact</div>
+                <div>
+                    <hr class="w-32 bg-amber-500 h-2 rounded-lg">
+                </div>
+            </div>
+            <form action="https://formspree.io/f/xyzgrknz" method="POST"
+                class="max-lg:w-3/4 lg:w-3/5 xl:w-2/5 flex flex-col gap-4" id="contactForm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-lg:gap-2">
+                    <div>
+                        <label for="first_name" class="sr-only">Prénom*</label>
+                        <input
+                            class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg border border-zinc-400 font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+                            type="text" name="first_name" id="first_name" placeholder="Prénom*" required>
+                    </div>
+                    <div>
+                        <label for="last_name" class="sr-only">Nom*</label>
+                        <input
+                            class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg border border-zinc-400 font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+                            type="text" name="last_name" id="last_name" placeholder="Nom*" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Email*</label>
+                    <input
+                        class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg border border-zinc-400 font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+                        type="email" name="email" id="email" placeholder="Email*" required>
+                </div>
+                <div>
+                    <label for="message" class="sr-only">Message*</label>
+                    <textarea name="message" id="message" placeholder="Message*"
+                        class="w-full h-44 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg border border-zinc-400 font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+                        required></textarea>
+                </div>
+                <div class="w-1/2 max-sm:w-3/4">
+                    <button type="submit" aria-label="Envoyer le message via le formulaire de contact"
+                        class="bg-slate-100 text-slate-600 px-6 py-3 md:text-lg lg:text-xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-500 hover:ring-offset-4 ring ring-slate-500">
+                        Envoyer le message
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="bg-zinc-500 flex justify-center items-center max-sm:gap-4 gap-8 p-1 " id="footer">
+            <div class="flex items-center gap-2">
+                <div>
+                    <svg fill="#FFFFFF" height="20px" width="20px" version="1.1" id="Capa_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 367.467 367.467" xml:space="preserve">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <path
+                                    d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716 c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518 c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817 C326.536,262.466,262.481,326.518,183.73,326.518z">
+                                </path>
+                                <path
+                                    d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915 c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129 c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982 c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154 l2.658-7.133h-44.28L244.036,217.014z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="max-sm:text-sm font-semibold text-white">2024 Julien Miossec | Tous droits réservés.</div>
+            </div>
+            <div class="flex max-sm:gap-2 gap-6">
+                <a href="https://www.linkedin.com/in/julien-miossec-a55869210/" class="text-zinc-50 flex items-center "
+                    onclick="window.open(this.href); return false;">
+                    <span class="sr-only">Linkedin</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="max-sm:w-6 max-sm:h-5 w-8 h-7" aria-hidden="true" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M22.23 0H1.77C.79 0 0 .77 0 1.73v20.55C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0zM7.06 20.45H3.56V9H7.06v11.45zM5.31 7.55c-1.12 0-2.03-.91-2.03-2.03s.91-2.03 2.03-2.03 2.03.91 2.03 2.03-.91 2.03-2.03 2.03zm15.14 12.9h-3.5v-5.85c0-1.39-.03-3.18-1.94-3.18-1.95 0-2.25 1.52-2.25 3.07v5.96h-3.5V9h3.36v1.56h.05c.47-.89 1.62-1.82 3.33-1.82 3.56 0 4.21 2.34 4.21 5.39v6.32z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/julienM29" class="text-zinc-50 flex items-center "
+                    onclick="window.open(this.href); return false;">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="max-sm:w-6 max-sm:h-6 w-8 h-8" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed bottom-4 left-4 bg-white p-1 rounded">
+        <span class="sm:hidden">XS</span>
+        <span class="hidden sm:block md:hidden">SM</span>
+        <span class="hidden md:block lg:hidden">MD</span>
+        <span class="hidden lg:block xl:hidden">LG</span>
+        <span class="hidden xl:block ">XL</span>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Empêche le comportement par défaut du formulaire
+
+            var form = event.target;
+
+            // Envoie des données du formulaire via Fetch API
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Affiche un message d'alerte
+                    alert('Votre message a été envoyé avec succès !');
+                    // Recharge la page après la soumission
+                    window.location.reload();
+                } else {
+                    alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
+                }
+            }).catch(error => {
+                alert('Erreur : ' + error.message);
+            });
+        });
+    </script>
+    <script src="menu_burger.js"></script>
+    <script src="vanta_portefolio.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Découvrez mon projet de site web pour une pizzéria, intégrant des fonctionnalités de commande en ligne, ainsi que la gestion des ingrédients, des produits et des utilisateurs.">
+
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../dropDownList.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" type='text/css' href="../dist/styles.css">
+
+    <link rel="stylesheet" type='text/css' href="../focus.css">
+    <title>Projet PizzaOnLine</title>
+
+</head>
+
+<body>
+    <header id="navbar" class="flex flex-col fixed top-0 bg-slate-700/80 w-full h-16 drop-shadow-lg z-20">
+        <div class="h-full flex justify-between py-1 px-4 sm:px-6 md:px-12 lg:px-20 text-xl font-bold">
+            <div class="flex items-center h-full">
+                <a href="../portefolio.html#accueil" class="md:text-2xl sm:text-xl  text-white font-semibold">
+                    Julien Miossec
+                </a>
+            </div>
+
+            <ul class="flex justify-end gap-5 items-center sm:text-base md:text-lg text-white">
+                <li class="max-sm:hidden">
+                    <a href="../portefolio.html#accueil"
+                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50"
+                        aria-current="page">Accueil</a>
+                </li>
+                <li class="max-sm:hidden">
+                    <a href="../portefolio.html#about"
+                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Profil</a>
+                </li>
+                <li class="max-sm:hidden">
+                    <a href="../portefolio.html#projets"
+                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Projets</a>
+                </li>
+                <li class="max-sm:hidden">
+                    <a href="../portefolio.html#contact"
+                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Contact</a>
+                </li>
+            </ul>
+            <div class="sm:hidden flex items-center">
+                <button id="burger-button" aria-expanded="false" aria-controls="menuBurger"
+                    class="mobile-menu-button focus:outline-none focus:ring-4 focus:ring-amber-500">
+                    <svg class="w-6 h-6 text-white hover:text-amber-500" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hidden mobile-menu" id="menuBurger">
+            <ul class="divide-y-4 ">
+                <li><a href="../portefolio.html#accueil"
+                        class="block text-sm px-2 py-4 font-semibold bg-slate-600 hover:bg-slate-400 text-white transition duration-300"
+                        id="homeButton">Accueil</a>
+                </li>
+                <li><a href="../portefolio.html#about"
+                        class="block text-sm px-2 py-4 font-semibold bg-slate-600 hover:bg-slate-400 text-white transition duration-300"
+                        id="aboutButton">Profil</a></li>
+                <li><a href="../portefolio.html#projets"
+                        class="block text-sm px-2 py-4 font-semibold bg-slate-600 hover:bg-slate-400 text-white transition duration-300"
+                        id="projetButton">Projets</a>
+                </li>
+                <li><a href="../portefolio.html#contact"
+                        class="block text-sm px-2 py-4 font-semibold bg-slate-600 hover:bg-slate-400 text-white transition duration-300"
+                        id="contactButton">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class=" lg:h-screen  bg-cover" id="projets">
+        <div class="w-full h-full gap-8 md:gap-16 flex flex-col items-center py-16">
+            <div class="flex flex-col items-center max-md:text-2xl md:text-4xl lg:text-5xl gap-8 font-semibold mt-2">
+                <h1 class="text-white">
+                    PizzaOnLine
+                </h1>
+                <div>
+                    <hr class="w-32 bg-amber-500 h-2 rounded-lg">
+                </div>
+            </div>
+            <div class="w-5/6 lg:w-4/6">
+                <img src="/img/pizzaOnLine/accueil_PizzaOnLine2.jpg" alt="Page d'accueil du site de la pizzeria."
+                    class="shadow-lg shadow-zinc-500 w-full h-auto ring ring-zinc-500 rounded-lg">
+            </div>
+        </div>
+    </div>
+    <div class=" bg-gradient-to-b from-zinc-400 to-zinc-300 flex flex-col items-center py-14 drop-shadow-2xl"
+        id="introduction">
+        <div class=" w-full h-full gap-8 flex flex-col items-center pb-10">
+            <div class="w-3/4 flex flex-col gap-8">
+                <div class="flex flex-col gap-8">
+                    <div
+                        class="flex flex-col items-center max-md:text-xl md:text-3xl lg:text-4xl gap-6 font-semibold mt-2">
+                        <div class="font-semibold text-3xl md:text-5xl text-zinc-700 drop-shadow-2xl shadow-amber-500">
+                            Introduction
+                        </div>
+                        <div>
+                            <hr class="w-40 bg-amber-500 h-2 rounded-lg">
+                        </div>
+                    </div>
+                    <div class="text-justify max-lg:text-base text-lg">
+                        Pendant ma formation de développeur web et web mobile, il était prévu que je fasse un stage de 8
+                        semaines en entreprise. À la suite d'un problème de date avec l'entreprise, je n'ai pu faire que
+                        6
+                        semaines.
+                        Pour compléter les 2 semaines de stages manquantes, j'ai demandé à mon école de me proposer un
+                        sujet
+                        de
+                        projet. Le sujet proposé était de faire un site web de pizzeria.</div>
+                    <div class="text-justify max-lg:text-base text-lg">
+                        Après avoir fini ma formation j'ai décidé de continuer ce projet pour en faire un récapitulatif
+                        de
+                        tout
+                        ce que j'avais appris pendant ma formation.
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col gap-4">
+                    <h2 class="max-lg:text-lg text-xl font-bold text-center">Le site contient les
+                        fonctionnalités suivantes :</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div class="flex flex-col gap-3">
+                            <h3 class="text-center max-lg:text-base text-lg font-semibold mb-2">Utilisateur classique
+                            </h3>
+                            <ul class="list-disc list-inside space-y-2 text-sm xl:text-base">
+                                <li>Création d'un compte / Authentification</li>
+                                <li>Modification des informations / mot de passe</li>
+                                <li>Ajouter un produits au panier (quantité, taille)</li>
+                                <li>Supprimer un produit du panier</li>
+                                <li>Valider le panier</li>
+                                <li>Voir le détails de ses commandes </li>
+                                <li>Suivi de ses commandes.</li>
+                                <li>Envoyer un message au gérant la pizzéria</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <h3 class=" text-center max-lg:text-base text-lg font-semibold mb-2">Gérant de la pizzéria
+                            </h3>
+                            <ul class="list-disc list-inside space-y-2 text-sm xl:text-base">
+                                <li>Création / Modification / Suppression d'un produit ou ingrédient</li>
+                                <li>Gestion des stocks d'ingrédients</li>
+                                <li>Modifier des informations d'un autre utilisateur</li>
+                                <li>Gestion des autorisations (rôles)</li>
+                                <li>Gestion de la messagerie de la pizzéria.</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-3  ">
+                            <h3 class="text-center max-lg:text-base text-lg font-semibold mb-2">Pizzaïolo / Livreur</h3>
+                            <ul class="list-disc list-inside space-y-2 text-sm xl:text-base">
+                                <li>Valider la préparation d'une commande</li>
+                                <li>Valider la prise en charge d'une commande pour la livraison</li>
+                                <li>Voir le trajet et les arrêts des commandes à livrer</li>
+                                <li>Validation des livraisons</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="w-3/4 flex flex-col gap-4 max-lg:items-center">
+                <div class="font-medium max-lg:text-xl lg:text-3xl">Outils utilisés</div>
+                <div class="grid gap-4 grid-cols-2 lg:grid-cols-4 justify-around w-full">
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Langages</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-php-plain text-4xl text-blue-500"></i>
+                                <p class=" text-gray-700  max-sm:text-sm">PHP</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-javascript-plain text-4xl text-yellow-500"></i>
+                                <p class=" text-gray-700  max-sm:text-sm">JavaScript</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Frameworks</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-symfony-original text-4xl text-black"></i>
+                                <p class=" text-gray-700  max-sm:text-sm">Symfony</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-tailwindcss-original text-4xl text-teal-400"></i>
+                                <p class=" text-gray-700  max-sm:text-sm">Tailwind</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Bases de données</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-mysql-original text-4xl text-blue-500"></i>
+                                <p class=" text-gray-700  max-sm:text-sm">MySQL</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Autres</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <img src="/img/PhpStorm_Icon.png" alt="Icone de PhpStorm" class="w-11">
+                                <p class=" text-gray-700  max-sm:text-sm">PhpStorm</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <img src="/img/leaflet-transparent.png" alt="Icone de Leaflet" class="w-11">
+                                <p class=" text-gray-700  max-sm:text-sm">Leaflet</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-zinc-200 flex flex-col items-center pt-14 pb-20 drop-shadow-2xl" id="notification">
+        <div class="w-5/6 flex flex-col gap-4 max-lg:items-center">
+            <div class="flex flex-col items-center gap-10 font-semibold">
+                <div class="font-semibold text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-zinc-700 drop-shadow-lg">
+                    Fonctionnalités principales
+                </div>
+                <div>
+                    <hr class="w-40 bg-amber-500 h-2 rounded-lg">
+                </div>
+            </div>
+
+            <div x-data="setup()" class="relative">
+                <button @click="openMenu = !openMenu" :aria-expanded="openMenu ? 'true' : 'false'"
+                    aria-controls="megaMenu"
+                    class="flex items-center px-4 py-2 bg-slate-700 text-white font-bold rounded-lg text-lg sm:text-xl md:text-2xl lg:text-3xl transition-transform duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-4 focus:ring-amber-500">
+                    Fonctionnalités présentées
+                    <svg class="ml-2 w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-200" aria-hidden="true"
+                        :class="openMenu ? 'rotate-180' : ''" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+
+                </button>
+
+
+                <div id="megaMenu" x-show="openMenu" @click.away="openMenu = false"
+                    class="absolute mt-2 w-full bg-white shadow-lg z-50">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 bg-slate-500 border-t border-slate-600 rounded-lg shadow-lg">
+                        <template x-for="(section, sectionIndex) in sections" :key="sectionIndex">
+                            <div>
+                                <h2 class="text-xl font-semibold text-slate-50 mb-3 mt-2 border-b-2 border-slate-600 pb-2 drop-shadow-lg"
+                                    x-text="section"></h2>
+                                <ul class="space-y-2">
+                                    <template x-for="(feature, featureIndex) in features[sectionIndex]"
+                                        :key="featureIndex">
+                                        <li>
+                                            <a href="#"
+                                                @click.prevent="setActiveSection(sectionIndex); setActiveFeature(featureIndex); openMenu = false"
+                                                class="font-semibold hover:bg-amber-500 rounded-lg text-slate-50 py-2 px-4 transition-colors duration-500 ease-in-out hover:text-white hover:shadow-amber-600"
+                                                x-text="feature"></a>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+                <div class="w-full mt-6 bg-white shadow-md p-6 rounded-lg">
+                    <template x-if="activeSection === 0 && activeFeature === 0">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Ajout d'un ingrédient au stock</h2>
+
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl"
+                                        controls>
+                                        <source src="../video/pizzaOnLine/ajout_ingredient.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col max-sm:gap-2 gap-4 text-sm md:text-base lg:text-lg leading-relaxed">
+                                    <div>
+                                        Chaque produit est lié à plusieurs ingrédients. Pour ajouter un nouvel
+                                        ingrédient au stock,
+                                        l'utilisateur doit renseigner le <strong>nom</strong>, choisir une
+                                        <strong>quantité</strong>, et sélectionner une
+                                        <strong>catégorie</strong>.
+                                    </div>
+                                    <div>
+                                        Une <strong>vérification automatique</strong> s'assure que l'ingrédient n'existe
+                                        pas déjà dans la base de donnée.
+                                    </div>
+                                    <div>
+                                        Si l'ingrédient existe déjà, un <strong>message d'erreur</strong> s'affiche,
+                                        l'ingrédient
+                                        concerné est surligné en jaune, et
+                                        le bouton d'ajout de l'ingrédient disparaît.
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 0 && activeFeature === 1">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Ajout ou modification d'un produit
+                            </h2>
+
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="w-full xl:w-2/3 ">
+                                    <video
+                                        class="w-full rounded-lg shadow-xl transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl"
+                                        controls>
+                                        <source src="../video/pizzaOnLine/ajout_modification_suppression_produit.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col max-sm:gap-2 gap-4 text-sm md:text-base lg:text-lg leading-relaxed">
+                                    <div class="font-semibold">Pour ajouter un nouveau produit, le gérant doit remplir
+                                        un formulaire qui lui permet de :</div>
+                                    <ul class="list-disc list-inside space-y-2 p-2">
+                                        <li>Choisir un <strong>type</strong> de produit, ce qui mettra automatiquement à
+                                            jour la liste des ingrédients disponibles.</li>
+                                        <li>Indiquer un <strong>prix</strong>, un <strong>nom</strong>, et une
+                                            <strong>description</strong> pour le produit.
+                                        </li>
+                                        <li>Sélectionner une <strong>image</strong> pour le produit depuis ses fichiers.
+                                        </li>
+                                        <li>Ajouter plusieurs <strong>ingrédients</strong> : chaque ingrédient
+                                            sélectionné est automatiquement ajouté à la liste des ingrédients choisis.
+                                        </li>
+                                    </ul>
+                                    <div>En cliquant sur <span class="font-semibold text-amber-500">modifier un
+                                            produit</span>, le gérant arrive sur une page contenant un tableau listant
+                                        tous les produits permettant de <strong>supprimer</strong> un produit ou
+                                        d'accéder
+                                        à la page de <strong>modification</strong>.
+                                    </div>
+                                    <div>En cas de modification, le gérant est redirigé vers une page contenant le même
+                                        formulaire que celui utilisé pour l'ajout d'un produit.</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 0 && activeFeature === 2">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Modification du stock</h2>
+
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl"
+                                        controls>
+                                        <source src="../video/pizzaOnLine/gestion_stock_ingredient.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-6 text-sm md:text-base lg:text-lg">
+                                    <div class="w-full font-bold ">Le gérant accède à une page listant tous les
+                                        ingrédients sur laquelle il peut :</div>
+
+                                    <div class="flex flex-col max-sm:gap-2 gap-4">
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="text-base md:text-lg lg:text-xl font-semibold text-gray-800 ">
+                                                Trier les ingrédients</h3>
+                                            <div>
+                                                Trier par <strong>catégorie</strong> (légumes, viandes, etc.) ou par
+                                                <strong>nom</strong> pour trouver rapidement ce qu'il cherche.
+                                            </div>
+                                        </div>
+
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="text-base md:text-lg lg:text-xl font-semibold text-gray-800">
+                                                Modifier la quantité</h3>
+                                            <div>
+                                                Mettre à jour la <strong>quantité</strong> en entrant une nouvelle
+                                                valeur manuellement ou en utilisant les boutons <strong>+ / -</strong>.
+                                            </div>
+                                        </div>
+
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="text-base md:text-lg lg:text-xl font-semibold text-gray-800">
+                                                Supprimer un ingrédient</h3>
+                                            <div>
+                                                Supprimer un ingrédient en cliquant sur le bouton
+                                                <strong>supprimer</strong>.
+                                            </div>
+                                        </div>
+
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="text-base md:text-lg lg:text-xl font-semibold text-gray-800">
+                                                Valider les modifications</h3>
+                                            <div>
+                                                Dès qu'une modification est effectuée, le bouton <span
+                                                    class="text-amber-500 font-semibold">valider les changements</span>
+                                                devient actif, permettant au gérant
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 0 && activeFeature === 3">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Disponibilité d'un produit</h2>
+
+                            <div class="font-semibold text-justify text-base lg:text-lg leading-relaxed">
+                                Chaque pizza est liée à plusieurs ingrédients. Lorsque
+                                une pizza est commandée, le stock d'ingrédients correspondant est réduit.
+                                En fonction du stock des ingrédients, la pizza peut être
+                                soit <span class="text-green-600 font-bold">disponible</span> ou
+                                <span class="text-red-600 font-bold">indisponible</span> à la vente.
+                            </div>
+                            <div class="flex justify-around gap-8">
+                                <div class="flex flex-col items-center gap-4">
+                                    <div class="text-center font-semibold text-xl xl:text-2xl text-green-600">
+                                        Pizza disponible
+                                    </div>
+                                    <div class="flex justify-center">
+                                        <img src="/img/pizzaOnLine/pizza_disponible.jpg"
+                                            class="w-full xl:w-3/4 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
+                                            alt="Pizza Disponible">
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-center gap-4">
+                                    <div class="text-center font-semibold text-xl xl:text-2xl text-red-600">
+                                        Pizza indisponible
+                                    </div>
+                                    <div class="flex justify-center">
+                                        <img src="/img/pizzaOnLine/pizza_indisponible.jpg"
+                                            class="w-full xl:w-3/4 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
+                                            alt="Pizza Indisponible">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 1 && activeFeature === 0">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Création d'un compte</h2>
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl border-2"
+                                        controls>
+                                        <source src="../video/pizzaOnLine/creation_compte.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg leading-relaxed">
+                                    <div class="font-semibold">
+                                        Lors de la création d'un compte, l'utilisateur doit remplir un formulaire
+                                        classique.
+                                    </div>
+
+                                    <div>
+                                        Une <strong>adresse</strong> doit être fournie, qui sera utilisée comme
+                                        <strong>adresse de livraison</strong> pour ses commandes.
+                                    </div>
+
+                                    <div>
+                                        L'utilisateur peut entrer une adresse partielle ou complète. Une <strong
+                                            class="text-amber-500">API de géocoding</strong> retourne les 5 adresses les
+                                        plus pertinentes, qui sont affichées dans le champ des <strong>adresses
+                                            correspondantes</strong>.
+                                    </div>
+
+                                    <div>
+                                        L'utilisateur sélectionne l'adresse la plus appropriée, et la carte se centre
+                                        automatiquement sur cette adresse.
+                                    </div>
+
+                                    <div>
+                                        Si aucune adresse proposée ne correspond, l'utilisateur peut se déplacer
+                                        directement
+                                        sur la carte et cliquer sur l'endroit de son choix. Un appel à une <strong
+                                            class="text-amber-500">API de géocoding inversé</strong> est alors effectué
+                                        pour
+                                        insérer l'adresse exacte dans le champ.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 1 && activeFeature === 1">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Modification de son profil</h2>
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl"
+                                        controls>
+                                        <source src="../video/pizzaOnLine/modification_profil_2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg">
+                                    <div class="font-semibold">L'utilisateur peut accéder à son profil depuis la barre
+                                        de
+                                        navigation.</div>
+                                    <div>Son profil répertorie toutes ses informations, à l'exception de son mot de
+                                        passe.
+                                        Sur cette page, il peut choisir de <strong>modifier son mot de passe</strong> ou
+                                        <strong>modifier les informations de son compte</strong>.
+                                    </div>
+                                    <div>En cliquant sur <span class="text-amber-500 font-semibold">modifier ses
+                                            informations</span>, l'utilisateur accède au même formulaire que lors de la
+                                        création de son compte.</div>
+                                    <div>En cliquant sur <span class="text-amber-500 font-semibold">modifier le mot de
+                                            passe</span>, l'utilisateur arrive sur un formulaire dans lequel il doit
+                                        entrer
+                                        son ancien mot de passe deux fois ainsi qu'un nouveau mot de passe.</div>
+                                    <div>Si les mots de passe sont corrects, l'utilisateur revient sur son profil avec
+                                        un
+                                        <strong>message de confirmation</strong> . En cas d'erreur, un <strong>message
+                                            d'erreur</strong> s'affiche.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 1 && activeFeature === 2">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Gestion des utilisateurs</h2>
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl"
+                                        controls>
+                                        <source src="../video/pizzaOnLine/gestion_utilisateurs.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg">
+                                    <div>En cliquant sur <span class="text-amber-500 font-semibold">Gestion des
+                                            utilisateurs</span>, le gérant accède à un tableau affichant les
+                                        informations
+                                        principales de chaque utilisateur.</div>
+
+                                    <div>Il peut également modifier les informations en cliquant sur le lien <span
+                                            class="text-amber-500 font-semibold">Modifier</span>.</div>
+
+                                    <div>Lorsqu'une modification est nécessaire, une modale s'ouvre, permettant de
+                                        <strong>modifier les informations de l'utilisateur</strong> directement.
+                                    </div>
+
+                                    <div>Le gérant a la possibilité de modifier les accès des utilisateurs en ajustant
+                                        leurs
+                                        <strong>rôles</strong>.
+                                    </div>
+
+                                    <div>Pour la modification de l' <strong>adresse</strong>, cela suit le même principe
+                                        que
+                                        pour le formulaire de création et de modification d'un compte.</div>
+
+                                    <div>Le gérant peut toujours annuler la modification de l'adresse en cliquant sur
+                                        <span class="text-amber-500 font-semibold">Annuler la modification de
+                                            l'adresse</span>, ce qui restaurera l'adresse actuelle.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 2 && activeFeature === 0">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Ajouter un produit au panier</h2>
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl border-2"
+                                        controls>
+                                        <source src="../video/pizzaOnLine/ajout_produit_panier.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg">
+                                    <div class="font-semibold">Il existe plusieurs façons d'ajouter un produit au panier
+                                        :
+                                    </div>
+
+                                    <div class="text-justify"> <strong>Depuis la page d'accueil</strong> : En cliquant
+                                        sur
+                                        <span class="text-amber-500 font-bold">Ajouter au panier</span>. Une modale
+                                        s'ouvre
+                                        permettant de choisir la quantité, la taille et de prévisualiser le prix avant
+                                        d'ajouter le produit.
+                                    </div>
+
+                                    <div class="text-justify"> <strong>Depuis la page du détail d'un produit</strong> :
+                                        Si
+                                        le client clique sur <span class="text-amber-500 font-semibold">En savoir
+                                            plus</span>, il est redirigé vers une page détaillant le produit. Sur cette
+                                        page
+                                        il peut voir les différentes informations sur le produit et il peut aussi
+                                        ajouter le
+                                        produit au panier en choisissant sa quantité ainsi que la taille</div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 2 && activeFeature === 1">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Modifier ou valider son panier</h2>
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl border-2"
+                                        controls>
+                                        <source src="../video/pizzaOnLine/modification_validation_panier.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg">
+                                    <div>En cliquant sur <span class="text-amber-500 font-semibold">Panier</span> ou en
+                                        cliquant sur le logo <i class="fa-solid fa-cart-shopping"></i>
+                                        , l'utilisateur peut
+                                        accéder à son panier.</div>
+                                    <div class="text-justify">On peut y voir le contenu avec la quantité et le
+                                        <strong>prix</strong> de chaque article ainsi que
+                                        le <strong>prix total</strong> de la commande. Il peut directement <span
+                                            class="text-amber-500 font-semibold">supprimer</span> ou <span
+                                            class="text-amber-500 font-semibold"> modifier</span> une quantité d'un
+                                        article
+                                        avant de
+                                        valider la commande.
+                                    </div>
+                                    <div> En cliquant sur <span class="text-amber-500 font-semibold">commander</span>,
+                                        la
+                                        commande arrive dans la liste des
+                                        commandes à préparer par les
+                                        pizzaïolos.
+                                    </div>
+                                    <div class="font-semibold drop-shadow-lg">L'utilisateur peut aussi
+                                        observer son panier
+                                        depuis la barre de
+                                        navigation:</div>
+                                    <div>Lorsque son panier contient au moins un article, le logo <i
+                                            class="fa-solid fa-cart-shopping"></i> devient <span
+                                            class="text-red-500 font-semibold">rouge</span> et lorsqu'il
+                                        passe sa
+                                        souris au dessus il peut directement voir le contenu.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 2 && activeFeature === 2">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Préparation des commandes</h2>
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="w-full xl:w-2/3">
+                                    <img src="/img/pizzaOnLine/preparation_commandes.jpg"
+                                        alt="Page de préparation des commandes, listant les commandes à préparer ainsi que celles à livrer."
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl border-2 border-slate-500">
+                                </div>
+                                <div
+                                    class="w-full xl:w-1/3 text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg">
+                                    <div class="">Seul les <strong>pizzaïolos</strong>, les <strong>livreurs</strong> et
+                                        le
+                                        <strong>gérant</strong> ont accès à cette page.
+                                    </div>
+
+                                    <div>Les <strong>livreurs</strong> ont accès seulement aux commandes prêtes à être
+                                        livrées tandis que les
+                                        <strong>pizzaïolos</strong> ont accès aux commandes qu'il faut préparer. Le
+                                        <strong>gérant</strong> lui à accès aux 2
+                                        comme présenté sur l'image.
+                                    </div>
+                                    <div>Les commandes à préparées sont triées par <strong>date de commande</strong> et
+                                        celles prêtes à être
+                                        livrées sont triés par <strong> date de préparation</strong>.</div>
+                                    <div>En cliquant sur le bouton <span
+                                            class="text-amber-500 font-semibold">Livraison</span> Le livreur indique
+                                        prendre
+                                        en charge la commande et indique au client que sa commande est en cours de
+                                        livraison. </div>
+                                    <div>En cliquant sur <span class="text-amber-500 font-semibold">Fin de
+                                            préparation</span>, le pizzaïolo indique que la commande est prête a être
+                                        livrée.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template x-if="activeSection === 2 && activeFeature === 3">
+                        <div class="flex flex-col gap-6">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-700">Livraison</h2>
+                            <div class="relative flex flex-col xl:flex-row justify-center gap-8 " id="modalContainer">
+                                <div class="w-full xl:w-2/3">
+                                    <video
+                                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] focus:outline-none hover:shadow-xl border-2"
+                                        controls>
+                                        <source src="../video/pizzaOnLine/livraison_cote_livreur.mp4" type="video/mp4">
+                                        Votre navigateur ne prend pas en charge la vidéo.
+                                    </video>
+                                </div>
+                                <div class="flex flex-col w-full xl:w-1/3 gap-10">
+                                    <div class=" text-justify flex flex-col gap-4 text-sm md:text-base lg:text-lg">
+                                        <div>Il a accès à la <strong>liste des commandes</strong> qu'il a pris en charge
+                                            et
+                                            qu'il doit livrer.</div>
+                                        <div>Sur la carte, il peut voir le <strong>trajet</strong> qu'il doit faire
+                                            ainsi que
+                                            les différents <strong>arrêts</strong> de livraison.</div>
+                                        <div>En cliquant sur voir <strong>détails</strong>, il peut voir toutes les
+                                            produits
+                                            contenu dans la
+                                            commande et peut valider la livraison.</div>
+                                        <div>Pour la page de livraison pour un <strong>client</strong>, il peut voir
+                                            l'adresse
+                                            de livraison, la
+                                            carte avec la position du livreur ainsi que le détail du ou des commandes
+                                            qu'il va
+                                            recevoir.</div>
+                                        <div>Il peut aussi voir le nom du ou de la livreuse ainsi que le numéro de
+                                            téléphone
+                                            s'il y a besoin de l'appeler.</div>
+
+                                    </div>
+                                    <div class="w-full max-xl:flex  max-xl:justify-center">
+                                        <button id="openModal"
+                                            class="max-xl:w-3/4 w-full bg-slate-100 text-slate-600 px-4 py-1 md:text-base lg:text-lg xl:text-xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:outline-none focus:ring-4 hover:ring-amber-500 hover:ring-offset-4 ring ring-slate-500">
+                                            Page de livraison pour un client
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="imageModal"
+                                    class="hidden fixed inset-0 bg-black bg-opacity-50 justify-center items-center z-50 cursor-pointer">
+                                    <div
+                                        class="relative w-4/5 md:w-3/4 lg:w-3/5  flex justify-center items-center rounded-lg">
+                                        <img src="../img/pizzaOnLine/livraison_client.jpg"
+                                            alt="Page de livraison côté client"
+                                            class="w-full object-contain rounded-lg cursor-default">
+                                    </div>
+                                </div>
+
+                                <script src="/modal_livraison.js"></script>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bg-zinc-500 flex justify-center items-center max-sm:gap-4 gap-8 p-1" id="footer">
+        <div class="flex items-center gap-2">
+            <div>
+                <svg fill="#FFFFFF" height="20px" width="20px" version="1.1" id="Capa_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 367.467 367.467" xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <g>
+                            <path
+                                d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716 c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518 c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817 C326.536,262.466,262.481,326.518,183.73,326.518z">
+                            </path>
+                            <path
+                                d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915 c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129 c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982 c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154 l2.658-7.133h-44.28L244.036,217.014z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="max-sm:text-sm font-semibold text-white">2024 Julien Miossec | Tous droits réservés.</div>
+        </div>
+        <div class="flex max-sm:gap-2 gap-6">
+            <a href="https://www.linkedin.com/in/julien-miossec-a55869210/" class="text-zinc-50 flex items-center "
+                onclick="window.open(this.href); return false;">
+                <span class="sr-only">Linkedin</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="max-sm:w-6 max-sm:h-5 w-8 h-7" aria-hidden="true" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M22.23 0H1.77C.79 0 0 .77 0 1.73v20.55C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0zM7.06 20.45H3.56V9H7.06v11.45zM5.31 7.55c-1.12 0-2.03-.91-2.03-2.03s.91-2.03 2.03-2.03 2.03.91 2.03 2.03-.91 2.03-2.03 2.03zm15.14 12.9h-3.5v-5.85c0-1.39-.03-3.18-1.94-3.18-1.95 0-2.25 1.52-2.25 3.07v5.96h-3.5V9h3.36v1.56h.05c.47-.89 1.62-1.82 3.33-1.82 3.56 0 4.21 2.34 4.21 5.39v6.32z" />
+                </svg>
+            </a>
+            <a href="https://github.com/julienM29" class="text-zinc-50 flex items-center "
+                onclick="window.open(this.href); return false;">
+                <span class="sr-only">GitHub</span>
+                <svg class="max-sm:w-6 max-sm:h-6 w-8 h-8" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="fixed bottom-4 left-4">
+        <span class="sm:hidden">XS</span>
+        <span class="hidden sm:block md:hidden">SM</span>
+        <span class="hidden md:block lg:hidden">MD</span>
+        <span class="hidden lg:block xl:hidden">LG</span>
+        <span class="hidden xl:block ">XL</span>
+    </div>
+    <script src="../vanta_projet.js"></script>
+    <script src="../menu_burger.js"></script>
+    <script src="../menu_pizzaOnLine.js"></script>
+</body>
+
+</html>

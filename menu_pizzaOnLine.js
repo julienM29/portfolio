@@ -11,10 +11,10 @@ function setup() {
         ],
         setActiveSection(index) {
             this.activeSection = index;
-            this.activeFeature = 0; // Réinitialise la fonctionnalité active à la première fonctionnalité
+            this.activeFeature = 0; 
         },
         setActiveFeature(index) {
-            this.activeFeature = index; // Met à jour la fonctionnalité active
+            this.activeFeature = index; 
         }
         
 

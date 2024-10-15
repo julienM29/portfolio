@@ -7,8 +7,8 @@ minHeight: 200.00,
 minWidth: 200.00,
 scale: 1.00,
 scaleMobile: 1.00,
-color: 0xF59E0B,   // Couleur Amber-500
-backgroundColor: 0x0, // Couleur d'arrière-plan personnalisée  
+color: 0xF59E0B,   
+backgroundColor: 0x0,   
 maxDistance: 26.00,
 spacing: 20.00
 })
@@ -17,8 +17,8 @@ spacing: 20.00
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
-  color: 0xF59E0B,            // Couleur Amber-500
-  backgroundColor: 0x0, // Couleur d'arrière-plan personnalisée
+  color: 0xF59E0B,           
+  backgroundColor: 0x0, 
   minHeight: 200.00,
   minWidth: 200.00,
   scale: 1.00,

@@ -10,17 +10,16 @@
     <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Vérifiez si l'URL contient un hash
             const hash = window.location.hash;
 
             if (hash) {
-                const targetElement = document.getElementById(hash.substring(1)); // Retirer le '#'
+                const targetElement = document.getElementById(hash.substring(1)); 
 
                 if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' }); // Défiler vers l'élément cible
+                    targetElement.scrollIntoView({ behavior: 'smooth' }); 
 
-                    // Utiliser history.replaceState pour retirer le hash et 'index.html' de l'URL
-                    history.replaceState(null, null, window.location.origin + '/'); // Modifiez ici
+                    
+                    history.replaceState(null, null, window.location.origin + '/'); 
                 }
             }
         });
@@ -486,14 +485,6 @@
                 </a>
             </div>
         </div>
-    </div>
-
-    <div class="fixed bottom-4 left-4">
-        <span class="sm:hidden">XS</span>
-        <span class="hidden sm:block md:hidden">SM</span>
-        <span class="hidden md:block lg:hidden">MD</span>
-        <span class="hidden lg:block xl:hidden">LG</span>
-        <span class="hidden xl:block ">XL</span>
     </div>
     <script src="menu_burger.js"></script>
     <script src="vanta_portefolio.js"></script>

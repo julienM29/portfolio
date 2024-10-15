@@ -8,11 +8,28 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Vérifiez si l'URL contient un hash
+            const hash = window.location.hash;
+
+            if (hash) {
+                const targetElement = document.getElementById(hash.substring(1)); // Retirer le '#'
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' }); // Défiler vers l'élément cible
+
+                    // Utiliser history.replaceState pour retirer le hash et 'index.html' de l'URL
+                    history.replaceState(null, null, window.location.origin + '/'); // Modifiez ici
+                }
+            }
+        });
+    </script>
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" type='text/css' href="dist/styles.css">
     <link rel="stylesheet" type='text/css' href="focus.css">
 
-    <title>Portefolio | Julien Miossec</title>
+    <title>Portfolio | Julien Miossec</title>
     
 </head>
 <body class="h-screen w-screen overflow-x-hidden">
@@ -27,20 +44,20 @@
             <ul class="flex justify-end gap-5 items-center sm:text-base md:text-lg text-white">
                 <li class="max-sm:hidden">
                     <a href="index.html#accueil"
-                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50"
+                        class="scroll-link py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50"
                         aria-current="page">Accueil</a>
                 </li>
                 <li class="max-sm:hidden">
                     <a href="index.html#about"
-                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Profil</a>
+                        class="scroll-link py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Profil</a>
                 </li>
                 <li class="max-sm:hidden">
                     <a href="index.html#projets"
-                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Projets</a>
+                        class="scroll-link py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Projets</a>
                 </li>
                 <li class="max-sm:hidden">
                     <a href="index.html#contact"
-                        class="py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Contact</a>
+                        class="scroll-link py-2 px-2 tracking-wider transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 hover:text-amber-400 hover:border-b-2 hover:border-slate-50">Contact</a>
                 </li>
             </ul>
             <div class="sm:hidden flex items-center">
@@ -81,10 +98,10 @@
             <h1 class="text-center font-extrabold max-md:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Salut, je
                 m'appelle Julien
                 Miossec !</h1>
-            <div class="w-5/6 text-xl text-justify max-md:text-base md:text-2xl lg:text-3xl">Jeune développeur web en
+            <div class="w-full sm:w-5/6 text-xl text-justify max-md:text-base md:text-2xl lg:text-3xl">Jeune développeur web en
                 reconversion, je suis à la recherche d'une entreprise pour réaliser mon alternance de concepteur
                 développeur d'applications (Bac+4) ou pour acquérir une première expérience professionnelle.</div>
-            <a href="#projets"
+            <a href="index.html#projets"
                 class="bg-slate-100 text-slate-600 px-6 py-3 md:text-lg lg:text-xl xl:text-2xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500">
                 Mes projets
             </a>
@@ -96,7 +113,7 @@
                 À propos de moi
             </div>
             <div>
-                <hr class="w-32 bg-amber-500 h-2 rounded-lg">
+                <hr class="w-40 bg-amber-500 h-2 rounded-lg">
             </div>
         </div>
         <div class="flex max-lg:flex-col max-lg:w-full max-lg:items-center justify-center gap-14">
@@ -128,7 +145,7 @@
                 </div>
 
                 <div class="justify-center flex">
-                    <a href="#contact"
+                    <a href="index.html#contact"
                         class="bg-slate-100 text-slate-600 px-6 py-3 md:text-lg lg:text-xl xl:text-2xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500">
                         Contact
                     </a>
@@ -254,49 +271,49 @@
                 </div>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 items-center w-full justify-items-center max-lg:gap-6">
-                <div class="w-3/4 p-4 flex flex-col gap-6">
+                <div class="w-11/12 md:w-3/4 p-4 flex flex-col gap-6">
                     <div class="relative group">
                         <img src="/img/pizzaOnLine/accueil_PizzaOnLine2.jpg"
                             class="shadow-lg shadow-zinc-50 w-full rounded-lg max-h-80 object-cover"
                             alt="Fond d'écran de la page d'accueil du site">
                         <div
-                            class="absolute inset-0 bg-black/50 backdrop-blur-md rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
-                            <div class="grid grid-cols-3 gap-6 justify-center w-full ">
+                            class="absolute inset-0 bg-black/50 backdrop-blur-md rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-1 sm:p-6">
+                            <div class="flex flex-col sm:grid sm:grid-cols-3 gap-1 sm:gap-6 sm:justify-center w-full ">
                                 <div
-                                    class="bg-white bg-opacity-10 rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl w-full">
-                                    <h3 class="text-xl font-bold text-gray-50 mb-4">Langages</h3>
-                                    <ul class="space-y-4 font-semibold">
-                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                            <i class="devicon-php-plain text-4xl text-blue-500"></i>
-                                            <p class="text-gray-700">PHP</p>
+                                    class="max-sm:flex max-sm:gap-2 bg-white bg-opacity-10 rounded-xl shadow-lg max-sm:p-1 p-2 text-center sm:transition-transform sm:hover:translate-y-[-10px] sm:transform hover:shadow-2xl w-full">
+                                    <h3 class="text-xl max-sm:text-sm max-sm:flex max-sm:items-center font-bold text-gray-50 sm:mb-4">Langages</h3>
+                                    <ul class="max-sm:flex max-sm:gap-2 sm:space-y-4 font-semibold max-sm:text-xs">
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 max-sm:items-center">
+                                            <i class="devicon-php-plain text-4xl max-sm:text-base text-blue-500"></i>
+                                            <p class="flex items-center text-gray-700">PHP</p>
                                         </li>
-                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                            <i class="devicon-javascript-plain text-4xl text-yellow-500"></i>
-                                            <p class="text-gray-700">JavaScript</p>
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 max-sm:items-center">
+                                            <i class="devicon-javascript-plain text-4xl max-sm:text-base text-yellow-500"></i>
+                                            <p class="flex items-center text-gray-700">JavaScript</p>
                                         </li>
                                     </ul>
                                 </div>
                                 <div
-                                    class="bg-white bg-opacity-10 rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl w-full">
-                                    <h3 class="text-xl font-bold text-gray-50 mb-4">Frameworks</h3>
-                                    <ul class="space-y-4 font-semibold">
-                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                            <i class="devicon-symfony-original text-4xl text-black"></i>
-                                            <p class="text-gray-700">Symfony</p>
+                                    class="max-sm:flex max-sm:gap-2 bg-white bg-opacity-10 rounded-xl shadow-lg max-sm:p-1 p-2 text-center sm:transition-transform sm:hover:translate-y-[-10px] sm:transform hover:shadow-2xl w-full">
+                                    <h3 class="text-xl max-sm:text-sm max-sm:flex max-sm:items-center font-bold text-gray-50 sm:mb-4">Frameworks</h3>
+                                    <ul class="max-sm:flex max-sm:gap-2 sm:space-y-4 font-semibold max-sm:text-xs">
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 max-sm:items-center">
+                                            <i class="devicon-symfony-original text-4xl max-sm:text-base text-black"></i>
+                                            <p class="flex items-center text-gray-700">Symfony</p>
                                         </li>
-                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                            <i class="devicon-tailwindcss-original text-4xl text-teal-400"></i>
-                                            <p class="text-gray-700">Tailwind</p>
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 max-sm:items-center">
+                                            <i class="devicon-tailwindcss-original text-4xl max-sm:text-base text-teal-400"></i>
+                                            <p class="flex items-center text-gray-700">Tailwind</p>
                                         </li>
                                     </ul>
                                 </div>
                                 <div
-                                    class="bg-white bg-opacity-10 rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl w-full">
-                                    <h3 class="text-xl font-bold text-gray-50 mb-4">Base de données</h3>
-                                    <ul class="space-y-4 font-semibold">
-                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                            <i class="devicon-mysql-original text-4xl text-blue-500"></i>
-                                            <p class="text-gray-700">MySQL</p>
+                                    class="max-sm:flex max-sm:gap-2 bg-white bg-opacity-10 rounded-xl shadow-lg max-sm:p-1 p-2 text-center sm:transition-transform sm:hover:translate-y-[-10px] sm:transform hover:shadow-2xl w-full">
+                                    <h3 class="text-xl max-sm:text-sm max-sm:flex max-sm:items-center font-bold text-gray-50 sm:mb-4">Base de données</h3>
+                                    <ul class="max-sm:flex max-sm:gap-2 sm:space-y-4 font-semibold max-sm:text-xs">
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 max-sm:items-center">
+                                            <i class="devicon-mysql-original text-4xl max-sm:text-base text-blue-500"></i>
+                                            <p class="flex items-center text-gray-700">MySQL</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -316,53 +333,53 @@
 
                     </div>
                 </div>
-                <div class="w-3/4 p-4 flex flex-col gap-6">
+                <div class="w-11/12 md:w-3/4 p-4 flex flex-col gap-6">
                     <div class="relative group">
                         <img src="/img/event/accueil.jpg"
                             class="shadow-lg shadow-zinc-50 w-full rounded-lg max-h-80 object-cover"
                             alt="Fond d'écran de la page d'accueil du site">
-                        <div
-                            class="absolute inset-0 bg-black/50 backdrop-blur-md rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
-                            <div class="grid grid-cols-3 gap-6 justify-center w-full ">
+                            <div
+                            class="absolute inset-0 bg-black/50 backdrop-blur-md rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-1 sm:p-6">
+                            <div class="flex flex-col sm:grid sm:grid-cols-3 gap-1 sm:gap-6 sm:justify-center w-full ">
                                 <div
-                                    class="bg-white bg-opacity-10 rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl w-full">
-                                    <h3 class="text-xl font-bold text-gray-50 mb-4">Langages</h3>
-                                    <ul class="space-y-4 font-semibold">
-                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2">
-                                            <i class="devicon-nodejs-plain-wordmark text-4xl text-green-500"></i>
-                                            <p class="mt-2 text-gray-700">Nodejs</p>
+                                    class="max-sm:flex  max-sm:gap-2 bg-white bg-opacity-10 rounded-xl shadow-lg max-sm:p-1 p-2 text-center sm:transition-transform sm:hover:translate-y-[-10px] sm:transform hover:shadow-2xl w-full">
+                                    <h3 class="text-xl max-sm:text-sm max-sm:flex max-sm:items-center font-bold text-gray-50 sm:mb-4">Langages</h3>
+                                    <ul class="max-sm:flex max-sm:justify-around max-sm:gap-2 sm:space-y-4 font-semibold max-sm:text-xs">
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 max-sm:items-center">
+                                            <i class="devicon-nodejs-plain-wordmark text-4xl max-sm:text-base text-green-500"></i>
+                                            <p class="flex items-center text-gray-700">Nodejs</p>
                                         </li>
-                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2">
-                                            <i class="devicon-javascript-plain text-4xl text-yellow-500"></i>
-                                            <p class="mt-2 text-gray-700">JavaScript</p>
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 max-sm:items-center">
+                                            <i class="devicon-javascript-plain text-4xl max-sm:text-base text-yellow-500"></i>
+                                            <p class="flex items-center text-gray-700">JavaScript</p>
                                         </li>
                                     </ul>
                                 </div>
                                 <div
-                                    class="bg-white bg-opacity-10 rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl w-full">
-                                    <h3 class="text-xl font-bold text-gray-50 mb-4">Frameworks</h3>
-                                    <ul class="space-y-4 font-semibold">
-                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2">
-                                            <i class="devicon-fastify-plain text-4xl text-black"></i>
-                                            <p class="mt-2 text-gray-700">Fastify</p>
+                                    class="max-sm:flex  max-sm:gap-2 bg-white bg-opacity-10 rounded-xl shadow-lg max-sm:p-1 p-2 text-center sm:transition-transform sm:hover:translate-y-[-10px] sm:transform hover:shadow-2xl w-full">
+                                    <h3 class="text-xl max-sm:text-sm max-sm:flex max-sm:items-center font-bold text-gray-50 sm:mb-4">Frameworks</h3>
+                                    <ul class="max-sm:flex max-sm:justify-around max-sm:gap-2 sm:space-y-4 font-semibold max-sm:text-xs">
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 max-sm:items-center">
+                                            <i class="devicon-fastify-plain text-4xl max-sm:text-base text-black"></i>
+                                            <p class="flex items-center text-gray-700">Fastify</p>
                                         </li>
-                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2">
-                                            <i class="devicon-bootstrap-plain text-4xl text-purple-500"></i>
-                                            <p class="mt-2 text-gray-700">Bootstrap</p>
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 max-sm:items-center">
+                                            <i class="devicon-bootstrap-plain text-4xl max-sm:text-base text-purple-500"></i>
+                                            <p class="flex items-center text-gray-700">Bootstrap</p>
                                         </li>
                                     </ul>
                                 </div>
                                 <div
-                                    class="bg-white bg-opacity-10 rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl w-full">
-                                    <h3 class="text-xl font-bold text-gray-50 mb-4">Base de données</h3>
-                                    <ul class="space-y-4 font-semibold">
-                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2">
-                                            <i class="devicon-mysql-original text-4xl text-blue-500"></i>
-                                            <p class="mt-2 text-gray-700">MySQL</p>
+                                    class="max-sm:flex  max-sm:gap-2 bg-white bg-opacity-10 rounded-xl shadow-lg max-sm:p-1 p-2 text-center sm:transition-transform sm:hover:translate-y-[-10px] sm:transform hover:shadow-2xl w-full">
+                                    <h3 class="text-xl max-sm:text-sm max-sm:flex max-sm:items-center font-bold text-gray-50 sm:mb-4">Base de données</h3>
+                                    <ul class="max-sm:flex max-sm:justify-around max-sm:gap-2 sm:space-y-4 font-semibold max-sm:text-xs">
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 max-sm:items-center">
+                                            <i class="devicon-mysql-original text-4xl max-sm:text-base text-blue-500"></i>
+                                            <p class="flex items-center text-gray-700">MySQL</p>
                                         </li>
-                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2">
-                                            <i class="devicon-dbeaver-plain text-4xl text-yellow-800"></i>
-                                            <p class="mt-2 text-gray-700">DBeaver</p>
+                                        <li class="flex gap-2 bg-gray-100 rounded-lg p-2 max-sm:items-center">
+                                            <i class="devicon-dbeaver-plain text-4xl max-sm:text-base text-yellow-800"></i>
+                                            <p class="flex items-center text-gray-700">DBeaver</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -429,7 +446,7 @@
         <div class="bg-zinc-500 flex justify-center items-center max-sm:gap-4 gap-8 p-1 " id="footer">
             <div class="flex items-center gap-2">
                 <div>
-                    <svg fill="#FFFFFF" height="20px" width="20px" version="1.1" id="Capa_1"
+                    <svg fill="#FFFFFF" class="max-sm:w-4 w-5 max-sm:h-4 h-5" version="1.1" id="Capa_1"
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         viewBox="0 0 367.467 367.467" xml:space="preserve">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -446,13 +463,13 @@
                         </g>
                     </svg>
                 </div>
-                <div class="max-sm:text-sm font-semibold text-white">2024 Julien Miossec | Tous droits réservés.</div>
+                <div class="max-sm:text-xs font-semibold text-white">2024 Julien Miossec | Tous droits réservés.</div>
             </div>
             <div class="flex max-sm:gap-2 gap-6">
                 <a href="https://www.linkedin.com/in/julien-miossec-a55869210/" class="text-zinc-50 flex items-center "
                     onclick="window.open(this.href); return false;">
                     <span class="sr-only">Linkedin</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="max-sm:w-6 max-sm:h-5 w-8 h-7" aria-hidden="true" fill="currentColor"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" aria-hidden="true" fill="currentColor"
                         viewBox="0 0 24 24">
                         <path
                             d="M22.23 0H1.77C.79 0 0 .77 0 1.73v20.55C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0zM7.06 20.45H3.56V9H7.06v11.45zM5.31 7.55c-1.12 0-2.03-.91-2.03-2.03s.91-2.03 2.03-2.03 2.03.91 2.03 2.03-.91 2.03-2.03 2.03zm15.14 12.9h-3.5v-5.85c0-1.39-.03-3.18-1.94-3.18-1.95 0-2.25 1.52-2.25 3.07v5.96h-3.5V9h3.36v1.56h.05c.47-.89 1.62-1.82 3.33-1.82 3.56 0 4.21 2.34 4.21 5.39v6.32z" />
@@ -461,7 +478,7 @@
                 <a href="https://github.com/julienM29" class="text-zinc-50 flex items-center "
                     onclick="window.open(this.href); return false;">
                     <span class="sr-only">GitHub</span>
-                    <svg class="max-sm:w-6 max-sm:h-6 w-8 h-8" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <svg class="max-sm:w-4 w-5 max-sm:h-4 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd"
                             d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
                             clip-rule="evenodd"></path>
@@ -471,43 +488,20 @@
         </div>
     </div>
 
-    <div class="fixed bottom-4 left-4 bg-white p-1 rounded">
+    <div class="fixed bottom-4 left-4">
         <span class="sm:hidden">XS</span>
         <span class="hidden sm:block md:hidden">SM</span>
         <span class="hidden md:block lg:hidden">MD</span>
         <span class="hidden lg:block xl:hidden">LG</span>
         <span class="hidden xl:block ">XL</span>
     </div>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Empêche le comportement par défaut du formulaire
-
-            var form = event.target;
-
-            // Envoie des données du formulaire via Fetch API
-            fetch(form.action, {
-                method: form.method,
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    // Affiche un message d'alerte
-                    alert('Votre message a été envoyé avec succès !');
-                    // Recharge la page après la soumission
-                    window.location.reload();
-                } else {
-                    alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
-                }
-            }).catch(error => {
-                alert('Erreur : ' + error.message);
-            });
-        });
-    </script>
     <script src="menu_burger.js"></script>
     <script src="vanta_portefolio.js"></script>
+    <script src="nav_barre.js"></script>
+    <script src="form_contact.js"></script>
+    
+        
+        
 </body>
 
 </html>

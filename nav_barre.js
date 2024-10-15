@@ -1,19 +1,13 @@
-// const navbar = document.getElementById('navbar');
-//         const targetSection = document.getElementById('projets');
-//         // Intersection Observer pour surveiller la section
-//         const observer = new IntersectionObserver((entries) => {
-//             entries.forEach(entry => {
-//                 if (entry.isIntersecting) {
-//                     // Si on arrive dans la section "introduction"
-//                         navbar.classList.replace('bg-slate-700/80', 'bg-transparent')
-                    
-//                 } else {
-//                     // Si on quitte la section "introduction"
-//                     navbar.classList.replace('bg-transparent', 'bg-slate-700/80')
+const links = document.querySelectorAll('a[href^="index.html#"]');
+links.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); 
 
-//                 }
-//             });
-//         });
+        const targetId = this.getAttribute('href').split('#')[1]; 
+        const targetElement = document.getElementById(targetId);
 
-//         // Observer la section cible
-//         observer.observe(targetSection);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});

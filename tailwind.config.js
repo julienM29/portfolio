@@ -1,6 +1,7 @@
 module.exports = {
   content: [
-    './*.html', // Ajoute le chemin vers tes fichiers HTML
+    './*.html',          // Tous les fichiers HTML à la racine
+    './**/*.html', 
     './src/**/*.{js,ts,jsx,tsx}', // Si tu as d'autres fichiers JavaScript
   ],
   theme: {

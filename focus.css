@@ -10,4 +10,16 @@ html {
 :focus {
     outline: 2px solid #f59e0b;
 }
+.social-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
 
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #f59e0b; /* Change la couleur sur le survol */
+}
+.fade-in {
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+  }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Effet de Navigation au Scroll</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Styles personnalisés */
+    .nav-logo {
+      transition: font-size 0.4s ease, opacity 0.4s ease;
+      /* Animation pour la taille de police et opacité */
+    }
+    .nav-links {
+      transition: margin-top 0.4s ease, opacity 0.4s ease;
+      /* Animation pour le margin-top et opacité */
+    }
+    .scrolled .nav-logo {
+      /* Agrandir le texte après scroll */
+      opacity: 1; /* Assurer qu'il est visible */
+      
+    }
+    .scrolled .nav-links {
+      /* Placer les liens sous le logo après scroll */
+      gap: 0.5rem;
+      opacity: 1; /* Assurer qu'il est visible */
+    }
+    .navbar {
+      transition: flex-direction 0.4s ease; /* Ajouter une transition pour la direction du flex */
+    }
+    .scrolled .navbar {
+      flex-direction: column-reverse; /* Passer à la direction colonne en scroll */
+    }
+  </style>
+</head>
+<body class="bg-gray-300">
+
+  <!-- Barre de Navigation -->
+  <header class="fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out">
+    <nav
+      id="navbar"
+      class="navbar flex flex-col-reverse gap-4 items-center justify-between px-4 py-4 bg-transparent shadow-md transition-transform duration-300"
+    >
+      <!-- Logo ou Texte -->
+      <div class="nav-logo flex text-3xl font-bold uppercase transition-all duration-400 h-auto text-white " id="GucciStyle">
+        Gucci
+      </div>
+
+      <!-- Liens de Navigation -->
+      <div class="nav-links flex space-x-4 transition-all duration-400 items-center" id="navLinks">
+        <a href="#" class="hover:text-gray-500">Home</a>
+        <a href="#" class="hover:text-gray-500">Shop</a>
+        <a href="#" class="hover:text-gray-500">About</a>
+        <a href="#" class="hover:text-gray-500">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mt-20">
+    <!-- Contenu principal pour ajouter un effet de défilement -->
+    <section class="h-[200vh] p-8">
+      <h1 class="text-3xl font-semibold">Bienvenue sur notre site</h1>
+      <p class="mt-4">Explorez notre collection et découvrez nos produits uniques.</p>
+    </section>
+  </main>
+
+  <!-- JavaScript pour l'effet de scroll -->
+  <script>
+    const navbar = document.getElementById("navbar");
+    const gucci = document.getElementById("GucciStyle");
+    const navLinks = document.getElementById("navLinks");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+        navbar.classList.remove("flex-col-reverse", "gap-4");
+        navbar.classList.replace("bg-transparent","bg-white")
+        gucci.classList.add("w-full", "text-center");
+        gucci.classList.replace('text-3xl', "text-2xl");
+        gucci.classList.replace('text-white', "text-black");
+        
+      } else {
+        navbar.classList.remove("scrolled");
+        navbar.classList.add("flex-col-reverse", "gap-4");
+        navbar.classList.replace("bg-white","bg-transparent");
+        gucci.classList.remove("w-full", "text-center");
+        gucci.classList.replace('text-2xl', "text-3xl");
+        gucci.classList.replace('text-black', "text-white");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -11,19 +11,19 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const hash = window.location.hash;
-    
+
             if (hash) {
                 const targetElement = document.getElementById(hash.substring(1)); // Retire le "#" pour trouver l'ID
-    
+
                 if (targetElement) {
                     // Défilement fluide vers l'élément cible
                     targetElement.scrollIntoView({ behavior: 'smooth' });
-    
+
                 }
             }
         });
     </script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
@@ -96,180 +96,177 @@
             </ul>
         </div>
     </header>
-    <div class="section md:h-screen ">
-        <div class="title h-screen w-screen flex justify-center items-center" id="accueil">
-            <div
-                class="flex flex-col w-10/12 max-md:gap-8 gap-14 items-center bg-zinc-50/90 p-4 rounded-lg shadow-2xl ">
-                <h1 class="text-center font-extrabold text-slate-600 max-md:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-                    Bonjour, je m'appelle 
-                    <span class="italic text-amber-500 ">Julien Miossec</span> !
-                </h1>
-                <p class="w-full sm:w-5/6 text-xl text-justify max-md:text-base md:text-2xl lg:text-3xl">Jeune
-                    développeur web en
-                    reconversion, je suis à la recherche d'une entreprise pour réaliser mon <b>alternance de concepteur
-                    développeur d'applications</b> (Bac+4) ou pour acquérir une <b>première expérience professionnelle</b>.</p>
-                <a href="index.html#projets"
-                    class="bg-slate-100 text-slate-600 px-6 py-3 md:text-lg lg:text-xl xl:text-2xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500">
-                    Mes projets
-                </a>
-            </div>
+    <div class="title h-screen w-screen flex justify-center items-center relative" id="accueil">
+        <div class="flex flex-col w-10/12 max-md:gap-8 gap-14 items-center bg-zinc-50/90 p-4 rounded-lg shadow-2xl ">
+            <h1 class="text-center font-extrabold text-slate-600 max-md:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+                Bonjour, je m'appelle
+                <span class="italic text-amber-500">Julien Miossec</span> !
+            </h1>
+            <p class="w-full sm:w-5/6 text-xl text-justify max-md:text-base md:text-2xl lg:text-3xl">
+                Jeune développeur web en reconversion, je suis à la recherche d'une entreprise pour réaliser mon
+                <b>alternance de concepteur développeur d'applications</b> (Bac+4) ou pour acquérir une
+                <b>première expérience professionnelle</b>.
+            </p>
+            <a href="index.html#projets"
+                class="bg-slate-100 text-slate-600 px-6 py-3 md:text-lg lg:text-xl xl:text-2xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500">
+                Mes projets
+            </a>
         </div>
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-zinc-50 font-bold animate-bounce flex flex-col items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="absolute bottom-8 transform -translate-x-1/2 text-zinc-50 font-bold animate-bounce flex flex-col items-center ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
             <a href="#introduction" class="text-xl">Scroll</a>
         </div>
     </div>
-    <div class="section xl:h-screen bg-zinc-50">
-        <div class="xl:h-screen gap-16 flex flex-col py-14 " id="about">
-            <div class="flex flex-col items-center max-md:text-3xl md:text-4xl lg:text-5xl gap-8 font-semibold mt-2">
-                <div>
-                    À propos de moi
+    
+    <div class="xl:h-screen gap-16 flex flex-col py-14 bg-zinc-50" id="about">
+        <div class="flex flex-col items-center max-md:text-3xl md:text-4xl lg:text-5xl gap-8 font-semibold mt-2">
+            <div>
+                À propos de moi
+            </div>
+            <div>
+                <hr class="w-40 bg-amber-500 h-2 rounded-lg">
+            </div>
+        </div>
+        <div class="flex max-lg:flex-col w-full max-lg:items-center justify-center gap-14">
+            <div class="flex flex-col gap-7 lg:w-1/3 w-5/6" id="apprenez">
+                <div class="flex flex-col items-center gap-4 font-semibold ">
+                    <div class="max-md:text-2xl md:text-3xl lg:text-4xl font-semibold">
+                        Apprenez à me connaitre
+                    </div>
+                    <div>
+                        <hr class="w-20 bg-amber-500 h-2 rounded-lg">
+                    </div>
                 </div>
-                <div>
-                    <hr class="w-40 bg-amber-500 h-2 rounded-lg">
+                <div class="text-justify flex flex-col gap-4 leading-6 max-md:text-base md:text-lg">
+                    <div>
+                        Je m'appelle Julien Miossec et j'ai suivi une formation en développement web et web mobile à
+                        l'ENI de Nantes en 2023. Actuellement, je recherche une entreprise pour réaliser une
+                        alternance
+                        ou ma première expérience professionnelle dans une entreprise sur Brest, Rennes ou Nantes.
+                    </div>
+                    <div>
+                        Ma formation m'a permis d'acquérir des compétences solides en HTML, CSS, Java, PHP,
+                        JavaScript
+                        et SQL, ainsi que dans divers frameworks tels que Spring Boot, Symfony et Angular. J'ai
+                        également acquis des bases solides en analyse et conception.
+                    </div>
+                    <div>
+                        En parallèle, je me forme en autodidacte sur des langages et frameworks supplémentaires,
+                        notamment Node.js avec Fastify et TailwindCSS. Dans la section Projets, vous pourrez
+                        découvrir
+                        quelques réalisations développées avec ces technologies.
+                    </div>
+                </div>
+
+                <div class="justify-center flex">
+                    <a href="index.html#contact"
+                        class="bg-slate-100 text-slate-600 px-6 py-3 md:text-lg lg:text-xl xl:text-2xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500">
+                        Contact
+                    </a>
+
                 </div>
             </div>
-            <div class="flex max-lg:flex-col max-lg:w-full max-lg:items-center justify-center gap-14">
-                <div class="flex flex-col gap-7 w-1/3 max-lg:w-5/6" id="apprenez">
-                    <div class="flex flex-col items-center gap-4 font-semibold mt-2">
-                        <div class="max-md:text-2xl md:text-3xl lg:text-4xl font-semibold">
-                            Apprenez à me connaitre
-                        </div>
-                        <div>
-                            <hr class="w-20 bg-amber-500 h-2 rounded-lg">
-                        </div>
+            <div class="flex flex-col gap-5 lg:w-2/5 w-5/6 " id="competences">
+                <div class="flex flex-col items-center gap-4 font-semibold ">
+                    <div class="text-2xl md:text-3xl lg:text-4xl font-semibold">
+                        Mes compétences
                     </div>
-                    <div class="text-justify flex flex-col gap-4 leading-6 max-md:text-base md:text-lg">
-                        <div>
-                            Je m'appelle Julien Miossec et j'ai suivi une formation en développement web et web mobile à
-                            l'ENI de Nantes en 2023. Actuellement, je recherche une entreprise pour réaliser une
-                            alternance
-                            ou ma première expérience professionnelle dans une entreprise sur Brest, Rennes ou Nantes.
-                        </div>
-                        <div>
-                            Ma formation m'a permis d'acquérir des compétences solides en HTML, CSS, Java, PHP,
-                            JavaScript
-                            et SQL, ainsi que dans divers frameworks tels que Spring Boot, Symfony et Angular. J'ai
-                            également acquis des bases solides en analyse et conception.
-                        </div>
-                        <div>
-                            En parallèle, je me forme en autodidacte sur des langages et frameworks supplémentaires,
-                            notamment Node.js avec Fastify et TailwindCSS. Dans la section Projets, vous pourrez
-                            découvrir
-                            quelques réalisations développées avec ces technologies.
-                        </div>
-                    </div>
-
-                    <div class="justify-center flex">
-                        <a href="index.html#contact"
-                            class="bg-slate-100 text-slate-600 px-6 py-3 md:text-lg lg:text-xl xl:text-2xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500">
-                            Contact
-                        </a>
-
+                    <div>
+                        <hr class="w-20 bg-amber-500 h-2 rounded-lg">
                     </div>
                 </div>
-                <div class="flex flex-col gap-5 max-w-full w-2/5 max-lg:w-5/6" id="competences">
-                    <div class="flex flex-col items-center  gap-4 font-semibold mt-2">
-                        <div class="max-md:text-2xl md:text-3xl lg:text-4xl font-semibold">
-                            Mes compétences
-                        </div>
-                        <div>
-                            <hr class="w-20 bg-amber-500 h-2 rounded-lg">
-                        </div>
+                <div class="grid gap-4 grid-cols-2 lg:grid-cols-4 justify-around w-full">
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Front-end</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-html5-plain text-4xl max-sm:text-2xl text-orange-600"></i>
+                                <p class=" max-sm:text-sm text-gray-700">HTML</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-css3-plain text-4xl max-sm:text-2xl text-blue-500"></i>
+                                <p class=" max-sm:text-sm text-gray-700">CSS</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-javascript-plain text-4xl max-sm:text-2xl text-yellow-500"></i>
+                                <p class=" max-sm:text-sm text-gray-700">JavaScript</p>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="grid gap-4 grid-cols-2 lg:grid-cols-4 justify-around w-full">
-                        <div
-                            class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform hover:translate-y-[-10px] transform hover:shadow-2xl">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Front-end</h3>
-                            <ul class="space-y-4 font-semibold">
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-html5-plain text-4xl max-sm:text-2xl text-orange-600"></i>
-                                    <p class=" max-sm:text-sm text-gray-700">HTML</p>
-                                </li>
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-css3-plain text-4xl max-sm:text-2xl text-blue-500"></i>
-                                    <p class=" max-sm:text-sm text-gray-700">CSS</p>
-                                </li>
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-javascript-plain text-4xl max-sm:text-2xl text-yellow-500"></i>
-                                    <p class=" max-sm:text-sm text-gray-700">JavaScript</p>
-                                </li>
-                            </ul>
-                        </div>
 
-                        <div
-                            class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Back-end</h3>
-                            <ul class="space-y-4 font-semibold">
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-java-plain text-4xl max-sm:text-2xl text-blue-500"></i>
-                                    <p class=" max-sm:text-sm text-gray-700">Java</p>
-                                </li>
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-php-plain text-4xl max-sm:text-2xl text-blue-500"></i>
-                                    <p class=" max-sm:text-sm text-gray-700">PHP</p>
-                                </li>
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i
-                                        class="devicon-nodejs-plain-wordmark text-4xl max-sm:text-2xl text-green-500"></i>
-                                    <p class=" max-sm:text-sm text-gray-700">Node.js</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div
-                            class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Frameworks</h3>
-                            <ul class="space-y-4 font-semibold">
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-spring-original text-4xl max-sm:text-2xl text-green-500"></i>
-                                    <p class="max-sm:text-sm text-gray-700">SpringBoots</p>
-                                </li>
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-symfony-original text-4xl max-sm:text-2xl text-black"></i>
-                                    <p class="  max-sm:text-sm text-gray-700">Symfony</p>
-                                </li>
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-fastify-plain text-4xl max-sm:text-2xl text-black"></i>
-                                    <p class="  max-sm:text-sm text-gray-700">Fastify</p>
-                                </li>
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-angular-plain text-4xl max-sm:text-2xl text-red-600"></i>
-                                    <p class=" max-sm:text-sm text-gray-700">Angular</p>
-                                </li>
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-tailwindcss-original text-4xl max-sm:text-2xl text-teal-400"></i>
-                                    <p class=" max-sm:text-sm text-gray-700">Tailwind</p>
-                                </li>
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-bootstrap-plain text-4xl max-sm:text-2xl text-purple-500"></i>
-                                    <p class=" max-sm:text-sm text-gray-700">Bootstrap</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div
-                            class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Base de donnée</h3>
-                            <ul class="space-y-4 font-semibold">
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-microsoftsqlserver-plain text-4xl max-sm:text-2xl text-black"></i>
-                                    <p class=" max-sm:text-sm text-gray-700">SQL Server</p>
-                                </li>
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-mysql-original text-4xl max-sm:text-2xl text-blue-500"></i>
-                                    <p class=" max-sm:text-sm text-gray-700">MySQL</p>
-                                </li>
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-mariadb-plain text-4xl max-sm:text-2xl text-teal-800"></i>
-                                    <p class=" max-sm:text-sm text-gray-700">MariaDB</p>
-                                </li>
-                                <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
-                                    <i class="devicon-dbeaver-plain text-4xl max-sm:text-2xl text-yellow-800"></i>
-                                    <p class=" max-sm:text-sm text-gray-700">DBeaver</p>
-                                </li>
-                            </ul>
-                        </div>
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Back-end</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-java-plain text-4xl max-sm:text-2xl text-blue-500"></i>
+                                <p class=" max-sm:text-sm text-gray-700">Java</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-php-plain text-4xl max-sm:text-2xl text-blue-500"></i>
+                                <p class=" max-sm:text-sm text-gray-700">PHP</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-nodejs-plain-wordmark text-4xl max-sm:text-2xl text-green-500"></i>
+                                <p class=" max-sm:text-sm text-gray-700">Node.js</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Frameworks</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-spring-original text-4xl max-sm:text-2xl text-green-500"></i>
+                                <p class="max-sm:text-sm text-gray-700">SpringBoots</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-symfony-original text-4xl max-sm:text-2xl text-black"></i>
+                                <p class="  max-sm:text-sm text-gray-700">Symfony</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-fastify-plain text-4xl max-sm:text-2xl text-black"></i>
+                                <p class="  max-sm:text-sm text-gray-700">Fastify</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-angular-plain text-4xl max-sm:text-2xl text-red-600"></i>
+                                <p class=" max-sm:text-sm text-gray-700">Angular</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-tailwindcss-original text-4xl max-sm:text-2xl text-teal-400"></i>
+                                <p class=" max-sm:text-sm text-gray-700">Tailwind</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-bootstrap-plain text-4xl max-sm:text-2xl text-purple-500"></i>
+                                <p class=" max-sm:text-sm text-gray-700">Bootstrap</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-2 text-center transition-transform transform hover:translate-y-[-10px] hover:shadow-2xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Base de donnée</h3>
+                        <ul class="space-y-4 font-semibold">
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-microsoftsqlserver-plain text-4xl max-sm:text-2xl text-black"></i>
+                                <p class=" max-sm:text-sm text-gray-700">SQL Server</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-mysql-original text-4xl max-sm:text-2xl text-blue-500"></i>
+                                <p class=" max-sm:text-sm text-gray-700">MySQL</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-mariadb-plain text-4xl max-sm:text-2xl text-teal-800"></i>
+                                <p class=" max-sm:text-sm text-gray-700">MariaDB</p>
+                            </li>
+                            <li class="flex gap-2 bg-gray-100 rounded-lg p-2 items-center">
+                                <i class="devicon-dbeaver-plain text-4xl max-sm:text-2xl text-yellow-800"></i>
+                                <p class=" max-sm:text-sm text-gray-700">DBeaver</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

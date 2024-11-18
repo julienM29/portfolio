@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Animation d'entrée pour le titre
 gsap.from(".title", {
-  duration: 3.5,  // Rendre l'animation plus longue
+  duration: 2.5,  // Rendre l'animation plus longue
   opacity: 0,   // Commencer à une opacité nulle
   y: -50,       // Déplacement vertical
   scale: 0.8,   // Ajoute une légère réduction de taille au départ
@@ -14,7 +14,7 @@ gsap.from(".title", {
 gsap.from("#about", {
   scrollTrigger: {
     trigger: "#about",
-    start: isMobile ? "top 75%" : "top 50%", // Mobile vs Desktop
+    start: isMobile ? "top 75%" : "top 60%", // Mobile vs Desktop
     toggleActions: "play none none reverse",
   },
   opacity: 0,
@@ -33,6 +33,7 @@ gsap.from("#apprenez", {
   duration: 1,
   ease: "power2.out",
 });
+if(!isMobile){
 // Animation sur la partie compétences
 gsap.from("#competences", {
   scrollTrigger: {
@@ -44,6 +45,8 @@ gsap.from("#competences", {
   duration: 1,
   ease: "power2.out",
 });
+
+}
 // Animations pour les projets
 gsap.from(".project-item", {
     opacity: 0,

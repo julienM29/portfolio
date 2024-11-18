@@ -1210,19 +1210,9 @@ video {
   padding-bottom: 0.25rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .py-14 {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
-}
-
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .py-2 {
@@ -1317,10 +1307,6 @@ video {
 
 .font-extrabold {
   font-weight: 800;
-}
-
-.font-medium {
-  font-weight: 500;
 }
 
 .font-semibold {
@@ -1537,11 +1523,6 @@ video {
 
 .ring-slate-600\/20 {
   --tw-ring-color: rgb(71 85 105 / 0.2);
-}
-
-.ring-zinc-500 {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(113 113 122 / var(--tw-ring-opacity));
 }
 
 .drop-shadow-2xl {
@@ -1855,14 +1836,6 @@ body {
     display: flex;
   }
 
-  .max-md\:w-3\/5 {
-    width: 60%;
-  }
-
-  .max-md\:w-4\/5 {
-    width: 80%;
-  }
-
   .max-md\:w-5\/6 {
     width: 83.333333%;
   }
@@ -2091,10 +2064,6 @@ body {
     gap: 3rem;
   }
 
-  .md\:gap-16 {
-    gap: 4rem;
-  }
-
   .md\:p-4 {
     padding: 1rem;
   }
@@ -2142,10 +2111,6 @@ body {
 
   .lg\:w-3\/5 {
     width: 60%;
-  }
-
-  .lg\:w-4\/6 {
-    width: 66.666667%;
   }
 
   .lg\:grid-cols-2 {
@@ -2234,11 +2199,6 @@ body {
   .xl\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .xl\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .xl\:text-xl {

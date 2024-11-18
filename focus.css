@@ -23,3 +23,7 @@ html {
     opacity: 0;
     transform: translateY(20px);
   }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+}

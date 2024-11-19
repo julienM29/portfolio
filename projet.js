@@ -21,7 +21,7 @@ let isMobile = window.matchMedia("(max-width: 768px)").matches;
 gsap.registerPlugin(ScrollTrigger);
 
 // Animation d'entrée pour le titre
-gsap.from(".title", {
+gsap.from(".imgAccueil", {
   duration: 3.5,  // Rendre l'animation plus longue
   opacity: 0,   // Commencer à une opacité nulle
   y: -50,       // Déplacement vertical

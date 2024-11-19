@@ -17,13 +17,10 @@ html {
 .social-icon:hover {
     transform: scale(1.2);
     color: #f59e0b; /* Change la couleur sur le survol */
-}
-.fade-in {
-    font-size: 1.5rem;
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  body {
+} 
+body {
     font-family: 'Roboto', sans-serif;
 }
+
+
+

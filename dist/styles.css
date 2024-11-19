@@ -724,10 +724,6 @@ video {
   height: 100vh;
 }
 
-.h-11 {
-  height: 2.75rem;
-}
-
 .max-h-80 {
   max-height: 20rem;
 }
@@ -1269,10 +1265,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-thin {
-  font-weight: 100;
 }
 
 .uppercase {
@@ -1850,14 +1842,6 @@ body {
     width: 1.25rem;
   }
 
-  .max-sm\:w-7 {
-    width: 1.75rem;
-  }
-
-  .max-sm\:w-9 {
-    width: 2.25rem;
-  }
-
   .max-sm\:w-8 {
     width: 2rem;
   }
@@ -2043,11 +2027,6 @@ body {
 
   .md\:text-lg {
     font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
-  .md\:text-xl {
-    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }

@@ -1,17 +1,6 @@
 let isMobile = window.matchMedia("(max-width: 768px)").matches;
 gsap.registerPlugin(ScrollTrigger);
 
-// Animation d'entrée pour le titre
-setTimeout(() => {
-  gsap.from(".title", {
-      duration: 2.5,
-      opacity: 0,
-      y: -50,
-      scale: 0.8,
-      ease: "power3.out",
-  });
-}, 300);
-
 // Animations pour la section About
 gsap.from("#about", {
   scrollTrigger: {

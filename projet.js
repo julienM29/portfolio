@@ -45,8 +45,8 @@ gsap.from(".imgAccueil", {
   // Animation Outils utilisés
   gsap.from(".outils", {
     scrollTrigger: {
-        trigger: "#introduction",
-        start: "top 0%", // Mobile vs Desktop
+        trigger: "#outils",
+        start: "top 85%", // Mobile vs Desktop
         toggleActions: "play none none reverse",
       },
     duration: 1.5,

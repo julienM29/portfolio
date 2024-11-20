@@ -35,12 +35,11 @@ gsap.from("#apprenez", {
   duration: 1,
   ease: "power2.out",
 });
-if(!isMobile){
 // Animation sur la partie compétences
 gsap.from("#competences", {
   scrollTrigger: {
-    trigger: "#about",
-    start: isMobile ? "top 10%" : "top 45%", // Mobile vs Desktop
+    trigger: "#competences",
+    start: isMobile ? "top 85%" : "top 45%", // Mobile vs Desktop
   },
   opacity: 0,
   x: 100,
@@ -48,7 +47,7 @@ gsap.from("#competences", {
   ease: "power2.out",
 });
 
-}
+
 // Animations pour les projets
 gsap.from(".project-item", {
     opacity: 0,

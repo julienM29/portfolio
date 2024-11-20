@@ -16,8 +16,8 @@ gsap.from("#about", {
 // Animation pour la partie Apprenez en plus sur moi
 gsap.from("#apprenez", {
   scrollTrigger: {
-    trigger: "#about",
-    start: "top 45%",
+    trigger: isMobile ? "#apprenez" : "#about",
+    start: isMobile ? "top 85%" : "top 45%", // Mobile vs Desktop
   },
   opacity: 0,
   x: -100,
@@ -27,11 +27,11 @@ gsap.from("#apprenez", {
 // Animation sur la partie compétences
 gsap.from("#competences", {
   scrollTrigger: {
-    trigger: "#competences",
+    trigger: isMobile ? "#competences" : "#about",
     start: isMobile ? "top 85%" : "top 45%", // Mobile vs Desktop
   },
   opacity: 0,
-  x: 100,
+  x: isMobile ? -100 : 100,
   duration: 1,
   ease: "power2.out",
 });

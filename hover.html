@@ -23,9 +23,12 @@
             }
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@1.5.3/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@1.5.3/dist/flowbite.min.css" rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         async>
     <link rel="stylesheet" type='text/css' href="dist/styles.css">
@@ -140,32 +143,32 @@
             </ul>
         </div>
     </header>
-    <div class=" title h-screen w-screen flex flex-col justify-center items-center relative" id="accueil">
-        <div class="flex flex-col gap-12 w-5/6 md:w-10/12">
-            <h1
-                class="text-center font-extrabold text-slate-200 max-md:text-xl md:text-3xl lg:text-4xl xl:text-5xl max-md:h-16">
-                <span id="typewrite" class="anim-typewriter" data-period="2000"
-                    data-type='[ "Bonjour, je m&#39appelle Julien Miossec"]'>
-                    <span class="wrap"></span>
-                </span>
-            </h1>
-            <div
-                class="flex flex-col w-full max-md:gap-8 gap-14 items-center bg-zinc-50/90 px-3 py-5 rounded-lg shadow-2xl">
-                <p class="w-full sm:w-5/6 text-xl text-justify max-md:text-base md:text-2xl lg:text-3xl">
-                    Jeune développeur web en reconversion, je suis à la recherche d'une entreprise pour réaliser une
-                    alternance de <span class="text-amber-500 font-bold">concepteur développeur d'applications</span>
-                    (Bac+4) ou pour acquérir une
-                    <span class="text-amber-500 font-bold">première expérience professionnelle</span>.
-                </p>
-                <a href="index.html#projets"
-                    class="bg-slate-100 text-slate-600 px-5 py-2 md:text-lg lg:text-xl xl:text-2xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500">
-                    Mes projets
-                </a>
-            </div>
-        </div>
 
+    <div class="title h-screen w-screen flex justify-center items-center relative" id="accueil">
         <div
-            class="absolute max-md:bottom-20 bottom-8 transform -translate-x-1/2 text-zinc-50 font-bold animate-bounce flex flex-col items-center">
+            class="flex flex-col w-4/5 md:w-10/12 max-md:gap-8 gap-14 items-center bg-zinc-50/90 p-4 rounded-lg shadow-2xl ">
+            <h1 class="text-center font-extrabold text-slate-600 max-md:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+                Bonjour, je m'appelle
+                <span class="italic text-amber-500">Julien Miossec</span> !
+            </h1>
+            <h1 class="text-center font-extrabold text-slate-600 max-md:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+
+                <span id="typewrite" data-period="2000" data-type='[ "Bonjour, je m&#39appelle Julien Miossec"]'>
+                  <span class="wrap"></span>
+                </span>
+              </h1>
+            <p class="w-full sm:w-5/6 text-xl text-justify max-md:text-base md:text-2xl lg:text-3xl">
+                Jeune développeur web en reconversion, je suis à la recherche d'une entreprise pour réaliser mon
+                <b>alternance de concepteur développeur d'applications</b> (Bac+4) ou pour acquérir une
+                <b>première expérience professionnelle</b>.
+            </p>
+            <a href="index.html#projets"
+                class="bg-slate-100 text-slate-600 px-5 py-2 md:text-lg lg:text-xl xl:text-2xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500">
+                Mes projets
+            </a>
+        </div>
+        <div
+            class="absolute bottom-8 transform -translate-x-1/2 text-zinc-50 font-bold animate-bounce flex flex-col items-center ">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -173,7 +176,8 @@
             <a href="#about" class="text-xl">Scroll</a>
         </div>
     </div>
-    <div class=" xl:h-screen gap-16 flex flex-col py-14 bg-zinc-50" id="about">
+
+    <div class="xl:h-screen gap-16 flex flex-col py-14 bg-zinc-50" id="about">
         <div class="flex flex-col items-center max-md:text-3xl md:text-4xl lg:text-5xl gap-8 font-semibold mt-2">
             <p>
                 À propos de moi
@@ -377,9 +381,7 @@
                 </p>
             </div>
             <div id="card_panel_event"
-                class="modalEvenementiel main-modal fixed w-full top-[9%] inset-x-0 z-50 overflow-hidden flex justify-center items-center hidden">
-                <div id="backdrop_evenementiel" class="fixed inset-0 bg-opacity-50 backdrop-blur-sm z-40 cursor-pointer">
-                </div>
+                class="modalEvenementiel main-modal fixed w-full top-[10%] inset-x-0 z-50 overflow-hidden flex justify-center items-center hidden">
                 <div
                     class="modal-container bg-slate-50 border-4 border-amber-500 max-md:w-11/12 w-1/2 max-md:p-3 px-6 pb-6 pt-4 rounded-xl z-50 overflow-y-auto">
                     <div class="modal-content text-left ">
@@ -399,9 +401,10 @@
                         <div class="flex flex-col justify-center gap-6">
                             <div class="w-full flex justify-center">
                                 <img src="/img/event/accueil.webp" alt="Page d'accueil de site"
-                                    class="imgAccueil shadow-lg shadow-zinc-500 w-5/6 lg:w-4/6 h-auto rounded-lg">
+                                    class="imgAccueil shadow-lg shadow-zinc-500 w-5/6 lg:w-3/5 h-auto rounded-lg">
                             </div>
                             <div x-data="{ openTab: 1 }" class="space-y-4">
+                                <!-- Onglets -->
                                 <div class="flex justify-center space-x-4">
                                     <button
                                         :class="openTab === 1 ? 'bg-slate-300 text-slate-600 px-5 py-2 md:text-base lg:text-lg xl:text-xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500' : 'bg-transparent text-slate-600 px-5 py-2 md:text-base lg:text-lg xl:text-xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500'"
@@ -414,7 +417,11 @@
                                         Fonctionnalités
                                     </button>
                                 </div>
+
+
+                                <!-- Contenu des onglets -->
                                 <div x-show="openTab === 1" class="transition-all duration-300">
+                                    <!-- Outils -->
                                     <div class="flex flex-col gap-4 max-lg:items-center" id="outils">
                                         <div class="grid gap-4 grid-cols-2 lg:grid-cols-4 justify-around w-full">
                                             <div
@@ -515,6 +522,7 @@
                                     </div>
                                 </div>
                                 <div x-show="openTab === 2" class="transition-all duration-300">
+                                    <!-- Fonctionnalités -->
                                     <div
                                         class="border border-gray-300 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 max-md:p-2 p-4 rounded-lg shadow-lg flex flex-col gap-4">
                                         <h2
@@ -572,14 +580,14 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
             </div>
             <div id="card_panel_pizzeria"
-                class="modalPizzeria main-modal fixed w-full top-[9%] inset-x-0 z-50 overflow-hidden flex justify-center items-center hidden">
-                <div id="backdrop_pizzeria" class="fixed inset-0 bg-opacity-50 backdrop-blur-sm z-40 cursor-pointer">
-                </div>
+                class="modalPizzeria main-modal fixed w-full top-[10%] inset-x-0 z-50 overflow-hidden flex justify-center items-center hidden">
                 <div
                     class="modal-container bg-slate-50 border-4 border-amber-500 max-md:w-11/12 w-1/2 max-md:p-3 px-6 pb-6 pt-4 rounded-xl z-50 overflow-y-auto">
                     <div class="modal-content text-left ">
@@ -599,9 +607,10 @@
                         <div class="flex flex-col justify-center gap-6">
                             <div class="w-full flex justify-center">
                                 <img src="/img/pizzaOnLine/accueil_PizzaOnLine2.webp" alt="Page d'accueil de site"
-                                    class="imgAccueil shadow-lg shadow-zinc-500 w-5/6 lg:w-4/6 h-auto rounded-lg">
+                                    class="imgAccueil shadow-lg shadow-zinc-500 w-5/6 lg:w-3/5 h-auto rounded-lg">
                             </div>
                             <div x-data="{ openTab: 1 }" class="space-y-4">
+                                <!-- Onglets -->
                                 <div class="flex justify-center space-x-4">
                                     <button
                                         :class="openTab === 1 ? 'bg-slate-300 text-slate-600 px-5 py-2 md:text-base lg:text-lg xl:text-xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500' : 'bg-transparent text-slate-600 px-5 py-2 md:text-base lg:text-lg xl:text-xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500'"
@@ -614,7 +623,11 @@
                                         Fonctionnalités
                                     </button>
                                 </div>
+
+
+                                <!-- Contenu des onglets -->
                                 <div x-show="openTab === 1" class="transition-all duration-300">
+                                    <!-- Outils -->
                                     <div class="flex flex-col gap-4 max-lg:items-center" id="outils">
                                         <div class="grid gap-4 grid-cols-2 lg:grid-cols-4 justify-around w-full">
                                             <div
@@ -659,6 +672,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
+
                                             <div
                                                 class="outils border border-gray-300 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 rounded-xl shadow-lg p-2 text-center">
                                                 <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4">Base de
@@ -674,6 +688,7 @@
 
                                                 </ul>
                                             </div>
+
                                             <div
                                                 class="outils border border-gray-300 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 rounded-xl shadow-lg p-2 text-center">
                                                 <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4">Autres</h3>
@@ -698,6 +713,7 @@
                                     </div>
                                 </div>
                                 <div x-show="openTab === 2" class="transition-all duration-300">
+                                    <!-- Fonctionnalités -->
                                     <div
                                         class="border border-gray-300 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 max-md:p-2 p-4 rounded-lg shadow-lg flex flex-col gap-4">
                                         <h2
@@ -755,10 +771,61 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
             </div>
+            <script>
+                const card_open_event = document.getElementById('card_open_event')
+                const card_close_event = document.getElementById('card_close_event')
+                const card_panel_event = document.getElementById('card_panel_event')
+                const card_open_pizzeria = document.getElementById('card_open_pizzeria')
+                const card_close_pizzeria = document.getElementById('card_close_pizzeria')
+                const card_panel_pizzeria = document.getElementById('card_panel_pizzeria')
+                function modalState(card_open, card_panel) {
+                    if (card_panel.classList.contains('hidden')) {
+                        // Show modal
+                        card_panel.classList.remove('hidden')
+                        card_panel.classList.add('block')
+
+                        // Delete button
+                        card_open.classList.add('hidden')
+                        card_open.classList.remove('block')
+
+                        // Start animation open
+                        card_panel.classList.add('card_open')
+                    } else {
+                        // Delete modal
+                        card_panel.classList.add('hidden')
+                        card_panel.classList.remove('block')
+
+                        // Show button
+                        card_open.classList.remove('hidden')
+                        card_open.classList.add('block')
+
+                        // Remove animation open
+                        card_panel.classList.remove('card_open')
+                    }
+                }
+
+                card_open_event.addEventListener('click', function () {
+                    modalState(card_open_event, card_panel_event);
+                });
+
+                card_close_event.addEventListener('click', function () {
+                    modalState(card_open_event, card_panel_event);
+                });
+                card_open_pizzeria.addEventListener('click', function () {
+                    modalState(card_open_pizzeria, card_panel_pizzeria);
+                });
+
+                card_close_pizzeria.addEventListener('click', function () {
+                    modalState(card_open_pizzeria, card_panel_pizzeria);
+                });
+            </script>
+
 
         </div>
     </div>
@@ -771,7 +838,7 @@
                 </div>
             </div>
             <form action="https://formspree.io/f/xyzgrknz" method="POST"
-                class="max-lg:w-3/4 lg:w-3/5 xl:w-2/5 flex flex-col max-md:gap-2 gap-4" id="contactForm">
+                class="max-lg:w-3/4 lg:w-3/5 xl:w-2/5 flex flex-col gap-4" id="contactForm">
                 <div class="grid grid-cols-2 gap-5 max-lg:gap-2">
                     <div>
                         <label for="first_name" class="sr-only text-base">Prénom*</label>

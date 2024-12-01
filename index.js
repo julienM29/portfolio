@@ -85,3 +85,107 @@ gsap.to(".fade-in", {
         alert('Erreur : ' + error.message);
     });
 });
+
+var TxtType = function (el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function () {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.querySelector('.wrap').textContent = this.txt;
+
+  var that = this;
+  var delta = 200 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500; // Délais avant de recommencer
+  }
+
+  setTimeout(function () {
+      that.tick();
+  }, delta);
+};
+
+window.onload = function () {
+  var elements = document.getElementById('typewrite');
+  var toRotate = elements.getAttribute('data-type');
+  var period = elements.getAttribute('data-period');
+  if (toRotate) {
+      new TxtType(elements, JSON.parse(toRotate), period);
+  }
+};
+
+const card_open_event = document.getElementById('card_open_event')
+const card_close_event = document.getElementById('card_close_event')
+const card_panel_event = document.getElementById('card_panel_event')
+const card_open_pizzeria = document.getElementById('card_open_pizzeria');
+const card_close_pizzeria = document.getElementById('card_close_pizzeria');
+const card_panel_pizzeria = document.getElementById('card_panel_pizzeria');
+const backdrop_pizzeria = document.getElementById('backdrop_pizzeria');
+const backdrop_evenementiel = document.getElementById('backdrop_evenementiel');
+
+function modalState(card_open, card_panel) {
+    if (card_panel.classList.contains('hidden')) {
+        card_panel.classList.remove('hidden');
+        card_panel.classList.add('block');
+
+        card_open.classList.add('hidden');
+        card_open.classList.remove('block');
+
+        card_panel.classList.add('card_open');
+    } else {
+        card_panel.classList.add('hidden');
+        card_panel.classList.remove('block');
+
+        card_open.classList.remove('hidden');
+        card_open.classList.add('block');
+
+        card_panel.classList.remove('card_open');
+    }
+}
+
+card_open_pizzeria.addEventListener('click', function () {
+    modalState(card_open_pizzeria, card_panel_pizzeria);
+});
+
+card_close_pizzeria.addEventListener('click', function () {
+    modalState(card_open_pizzeria, card_panel_pizzeria);
+});
+card_open_event.addEventListener('click', function () {
+  modalState(card_open_event, card_panel_event);
+});
+
+card_close_event.addEventListener('click', function () {
+  modalState(card_open_event, card_panel_event);
+});
+backdrop_pizzeria.addEventListener('click', function () {
+    if (!card_panel_pizzeria.classList.contains('hidden')) {
+        modalState(card_open_pizzeria, card_panel_pizzeria);
+    }
+});
+backdrop_evenementiel.addEventListener('click', function () {
+  if (!card_panel_event.classList.contains('hidden')) {
+      modalState(card_open_event, card_panel_event);
+  }
+});

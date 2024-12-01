@@ -381,7 +381,7 @@
                 <div id="backdrop_evenementiel" class="fixed inset-0 bg-opacity-50 backdrop-blur-sm z-40 cursor-pointer">
                 </div>
                 <div
-                    class="modal-container bg-slate-50 border-4 border-amber-500 max-md:w-11/12 w-1/2 max-md:p-3 px-6 pb-6 pt-4 rounded-xl z-50 overflow-y-auto">
+                    class="modal-container bg-slate-50 border-4 border-amber-500 max-md:w-11/12 w-1/2 max-md:p-3 px-6 pb-6 pt-4 rounded-xl z-50 max-h-screen overflow-y-auto">
                     <div class="modal-content text-left ">
                         <div class="flex justify-between items-center pb-3">
                             <p
@@ -520,11 +520,11 @@
                                         <h2
                                             class="max-md:text-base max-lg:text-lg text-xl font-bold text-slate-900 text-center">
                                             Le site contient les fonctionnalités suivantes :</h2>
-                                        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
-                                            <div class="flex flex-col gap-3 listeFonctionnalites">
+                                        <div class="grid grid-cols-2 lg:grid-cols-3 max-md:gap-3 gap-6">
+                                            <div class="flex flex-col max-md:gap-2 gap-3 listeFonctionnalites">
                                                 <h3
                                                     class="text-slate-800 text-center max-md:text-sm max-lg:text-base text-lg font-bold mb-2">
-                                                    Gestion des utilisateurs <i
+                                                    Utilisateurs <i
                                                         class="fas fa-user-circle text-amber-500"></i></h3>
                                                 <ul class="list-disc list-inside max-md:text-xs text-sm xl:text-base">
                                                     <li>Création d'un compte </li>
@@ -535,10 +535,10 @@
                                                     <li>Système de discussion</li>
                                                 </ul>
                                             </div>
-                                            <div class="flex flex-col gap-3 listeFonctionnalites">
+                                            <div class="flex flex-col max-md:gap-2 gap-3 listeFonctionnalites">
                                                 <h3
                                                     class="text-slate-800 text-center max-md:text-sm max-lg:text-base text-lg font-bold mb-2">
-                                                    Gestion des évènements <i
+                                                    Évènements <i
                                                         class="fa-solid fa-calendar-days text-amber-500"></i></h3>
                                                 <ul class="list-disc list-inside max-md:text-xs text-sm xl:text-base">
                                                     <li>Ajouter un évènement</li>
@@ -549,7 +549,7 @@
                                                     <li>Inviter un utilisateur à un évènement</li>
                                                 </ul>
                                             </div>
-                                            <div class="flex flex-col gap-3 listeFonctionnalites max-md:col-span-2">
+                                            <div class="flex flex-col max-md:gap-2 gap-3 listeFonctionnalites max-md:col-span-2">
                                                 <h3
                                                     class="text-slate-800 text-center max-md:text-sm max-lg:text-base text-lg font-bold mb-2">
                                                     Participation et évaluation <i
@@ -581,7 +581,7 @@
                 <div id="backdrop_pizzeria" class="fixed inset-0 bg-opacity-50 backdrop-blur-sm z-40 cursor-pointer">
                 </div>
                 <div
-                    class="modal-container bg-slate-50 border-4 border-amber-500 max-md:w-11/12 w-1/2 max-md:p-3 px-6 pb-6 pt-4 rounded-xl z-50 overflow-y-auto">
+                    class="modal-container bg-slate-50 border-4 border-amber-500 max-md:w-11/12 w-1/2 max-md:p-3 px-6 pb-6 pt-4 rounded-xl z-50 max-h-screen overflow-y-auto">
                     <div class="modal-content text-left ">
                         <div class="flex justify-between items-center pb-3">
                             <p
@@ -703,55 +703,50 @@
                                         <h2
                                             class="max-md:text-base max-lg:text-lg text-xl font-bold text-slate-900 text-center">
                                             Le site contient les fonctionnalités suivantes :</h2>
-                                        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
-                                            <div class="flex flex-col gap-3 listeFonctionnalites">
-                                                <h3
-                                                    class="text-slate-800 text-center max-md:text-sm max-lg:text-base text-lg font-bold mb-2">
-                                                    Gestion des utilisateurs <i
-                                                        class="fas fa-user-circle text-amber-500"></i></h3>
-                                                <ul class="list-disc list-inside max-md:text-xs text-sm xl:text-base">
-                                                    <li>Création d'un compte </li>
-                                                    <li>Modification des informations </li>
-                                                    <li>Voir le profil d'un utilisateur</li>
-                                                    <li>Envoyer un message </li>
-                                                    <li>Système de notification</li>
-                                                    <li>Système de discussion</li>
-                                                </ul>
+                                            <div class="grid grid-cols-2 lg:grid-cols-3 max-md:gap-3 gap-6">
+                                                <div class="flex flex-col max-md:gap-2 gap-3 listeFonctionnalites">
+                                                    <h3                                                     class="text-slate-800 text-center max-md:text-sm max-lg:text-base text-lg font-bold mb-2">
+                                                        Client <i
+                                                            class="fas fa-user-circle text-amber-500"></i>
+                                                    </h3>
+                                                    <ul class="list-disc list-inside space-y-2 max-md:text-xs text-sm xl:text-base">
+                                                        <li>Création et modification d'un compte client. </li>
+                                                        <li>Ajouter / supprimer un produits au panier. </li>
+                                                        <li>Valider le panier.</li>
+                                                        <li>Détails et suivi de ses commandes. </li>
+                                                        <li>Contacter le gérant de la pizzéria.</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="flex flex-col max-md:gap-2 gap-3 listeFonctionnalites">
+                                                    <h3                                                     class="text-slate-800 text-center max-md:text-sm max-lg:text-base text-lg font-bold mb-2">
+                                                        Gérant de la
+                                                        pizzéria <i class="fa-solid fa-user-tie text-amber-500"></i>
+                                                    </h3>
+                                                    <ul class="list-disc list-inside space-y-2 max-md:text-xs text-sm xl:text-base">
+                                                        <li>Création / Modification / Suppression d'un produit.</li>
+                                                        <li>Gestion des stocks d'ingrédients.</li>
+                                                        <li>Gestion des autres utilisateurs.</li>
+                                                        <li>Gestion de la messagerie de la pizzéria.</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="flex flex-col max-md:gap-2 gap-3  listeFonctionnalites max-md:col-span-2">
+                                                    <h3 class="text-slate-800 text-center max-lg:text-base text-lg font-bold mb-2">Pizzaïolo /
+                                                        Livreur <i class="fa-solid fa-user-cog text-amber-500 "></i></h3>
+                                                    <ul class="list-disc list-inside space-y-2 max-md:text-xs text-sm xl:text-base">
+                                                        <li>Valider la préparation d'une commande</li>
+                                                        <li>Valider la prise en charge d'une commande pour la livraison</li>
+                                                        <li>Voir le trajet et les arrêts des commandes à livrer</li>
+                                                        <li>Validation des livraisons</li>
+                                                    </ul>
+                                                </div>
+                        
                                             </div>
-                                            <div class="flex flex-col gap-3 listeFonctionnalites">
-                                                <h3
-                                                    class="text-slate-800 text-center max-md:text-sm max-lg:text-base text-lg font-bold mb-2">
-                                                    Gestion des évènements <i
-                                                        class="fa-solid fa-calendar-days text-amber-500"></i></h3>
-                                                <ul class="list-disc list-inside max-md:text-xs text-sm xl:text-base">
-                                                    <li>Ajouter un évènement</li>
-                                                    <li>Modifier un évènement</li>
-                                                    <li>Annuler un évènement</li>
-                                                    <li>Supprimer un évènement</li>
-                                                    <li>Voir ses évènements</li>
-                                                    <li>Inviter un utilisateur à un évènement</li>
-                                                </ul>
+                                            <div class="text-center">
+                                                <a href="projets/pizzeria.html"
+                                                    class="bg-slate-100 text-slate-600 px-5 py-2 md:text-base lg:text-lg xl:text-xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500">
+                                                    Voir les fonctionnalités
+                                                </a>
                                             </div>
-                                            <div class="flex flex-col gap-3 listeFonctionnalites max-md:col-span-2">
-                                                <h3
-                                                    class="text-slate-800 text-center max-md:text-sm max-lg:text-base text-lg font-bold mb-2">
-                                                    Participation et évaluation <i
-                                                        class="fa-solid fa-square-check text-amber-500"></i></h3>
-                                                <ul class="list-disc list-inside max-md:text-xs text-sm xl:text-base ">
-                                                    <li>Trier les évènements </li>
-                                                    <li>Voir le détail d'un évènement</li>
-                                                    <li>S'inscrire à un évènement</li>
-                                                    <li>Voir les évènements auxquels on participe</li>
-                                                    <li>Évaluer un évènement</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="text-center">
-                                            <a href="projets/evenementiel.html"
-                                                class="bg-slate-100 text-slate-600 px-5 py-2 md:text-base lg:text-lg xl:text-xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-4 hover:ring-amber-400 hover:ring-offset-4 ring ring-slate-500">
-                                                Voir les fonctionnalités
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

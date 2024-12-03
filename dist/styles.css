@@ -1091,6 +1091,11 @@ video {
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
+.bg-slate-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
@@ -1151,11 +1156,6 @@ video {
 .bg-zinc-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
-}
-
-.bg-slate-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50 {
@@ -1594,6 +1594,11 @@ video {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
+.ring-amber-400 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(251 191 36 / var(--tw-ring-opacity));
+}
+
 .ring-slate-500 {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(100 116 139 / var(--tw-ring-opacity));
@@ -1601,21 +1606,6 @@ video {
 
 .ring-slate-600\/20 {
   --tw-ring-color: rgb(71 85 105 / 0.2);
-}
-
-.ring-amber-500 {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(245 158 11 / var(--tw-ring-opacity));
-}
-
-.ring-amber-400 {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(251 191 36 / var(--tw-ring-opacity));
-}
-
-.ring-slate-400 {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(148 163 184 / var(--tw-ring-opacity));
 }
 
 .drop-shadow-2xl {
